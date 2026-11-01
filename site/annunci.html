@@ -72,6 +72,10 @@ const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt
 const data = iso => iso ? new Date(iso + "T00:00:00").toLocaleDateString("it-IT", {day: "numeric", month: "long", year: "numeric"}) : "";
 const oggi = () => { const d = new Date(); return new Date(d - d.getTimezoneOffset() * 60000).toISOString().slice(0, 10); };
 const PASSO = 25;
+// Regola della bacheca: ciò che non ha una scadenza propria resta visibile al massimo 30 giorni dalla pubblicazione.
+const GIORNI_IN_BACHECA = 30;
+const piuGiorni = (iso, n) => { const d = new Date(iso + "T00:00:00Z"); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); };
+const ultimoGiorno = (pubblicato, scade) => scade || piuGiorni(pubblicato, GIORNI_IN_BACHECA - 1);
 
 let ultimaVisita = null;
 try {
@@ -149,11 +153,13 @@ async function carica() {
     leggi("data/notizie.json", {notizie: [], dal: null}),
   ]);
   const g = oggi();
-  // Annunci visibili: già pubblicati e non scaduti.
+  // Annunci visibili: già pubblicati e non scaduti (scadenza propria, altrimenti 30 giorni).
   const locali = a.annunci
-    .filter(x => (!x.pubblicato_il || x.pubblicato_il <= g) && (!x.scade_il || x.scade_il >= g))
+    .filter(x => (!x.pubblicato_il || x.pubblicato_il <= g) && ultimoGiorno(x.pubblicato_il || g, x.scade_il) >= g)
     .map(x => ({...x, fonte: "locale", data: x.pubblicato_il || g}));
-  const ordine = n.notizie.map(x => ({...x, fonte: "ordine"}));
+  const ordine = n.notizie
+    .filter(x => ultimoGiorno(x.data, null) >= g)
+    .map(x => ({...x, fonte: "ordine"}));
   notizieDal = n.dal;
   voci = [...locali, ...ordine].sort((x, y) =>
     (y.in_evidenza ? 1 : 0) - (x.in_evidenza ? 1 : 0) || y.data.localeCompare(x.data));

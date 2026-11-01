@@ -30,6 +30,9 @@ Il sito si ripubblica da solo in circa un minuto.
 
 Categorie: Uffici giudiziari, Udienze e rinvii, Formazione, Bandi e incarichi, Sostituzioni e colleghi, Varie.
 Un annuncio con `pubblicato_il` futuro compare da quel giorno; dopo `scade_il` sparisce.
+**Regola dei 30 giorni:** se `scade_il` è `null`, l'annuncio resta visibile al massimo 30 giorni dalla
+pubblicazione (giorno di pubblicazione compreso), poi sparisce da solo. Vale anche per le notizie dell'Ordine.
+Gli annunci scaduti restano nel file e si possono ripubblicare cambiando le date.
 
 ## Notizie dell'Ordine
 
