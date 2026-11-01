@@ -1,9 +1,10 @@
 # Ordine Avvocati Potenza — Albo e bacheca
 
-Sito statico pubblicato con GitHub Pages.
+Sito statico pubblicato con GitHub Pages: https://avvocati-bacheca-potenza.github.io
 
-- `site/index.html`: albo degli iscritti (modulo ufficiale dell'Albo online incorporato).
-- `site/annunci.html`: notizie dell'Ordine + annunci di utilità.
+- `site/index.html`: bacheca (pagina iniziale): notizie dell'Ordine + annunci di utilità.
+- `site/albo.html`: albo degli iscritti (modulo ufficiale dell'Albo online incorporato).
+- `site/annunci.html`: rimando alla bacheca per i vecchi link.
 - `site/data/annunci.json`: annunci della bacheca (si modificano qui).
 - `site/data/notizie.json`: notizie importate automaticamente da www.ordineavvocatipotenza.it.
 - `scripts/aggiorna_notizie.py`: legge RSS e bacheca dell'Ordine e aggiorna `notizie.json`.

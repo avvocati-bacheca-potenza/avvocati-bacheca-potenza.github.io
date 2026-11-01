@@ -5,8 +5,8 @@
     window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
   }
 
-  // Si condivide sempre il link breve, mai l'indirizzo completo della pagina.
-  const LINK_CONDIVISIONE = "https://tinyurl.com/bacheca-avvocati-potenza";
+  // Si condivide sempre l'indirizzo principale del sito, mai quello della singola pagina.
+  const LINK_CONDIVISIONE = "https://avvocati-bacheca-potenza.github.io";
 
   function avviso(testo) {
     const el = document.createElement("div");

@@ -3,7 +3,7 @@
   "short_name": "Avvocati PZ",
   "description": "Albo degli iscritti e bacheca annunci dell'Ordine degli Avvocati di Potenza",
   "lang": "it",
-  "start_url": "./annunci.html",
+  "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "background_color": "#0f2347",
