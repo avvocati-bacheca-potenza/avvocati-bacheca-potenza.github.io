@@ -1,8 +1,35 @@
-// Web app: registra il service worker e, alla prima visita, propone di installare l'app.
+// Web app: registra il service worker, gestisce il pulsante "Condividi" e,
+// alla prima visita, propone di installare l'app.
 (() => {
   if ("serviceWorker" in navigator) {
     window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
   }
+
+  // Si condivide sempre il link breve, mai l'indirizzo completo della pagina.
+  const LINK_CONDIVISIONE = "https://tinyurl.com/bacheca-avvocati-potenza";
+
+  function avviso(testo) {
+    const el = document.createElement("div");
+    el.className = "avviso-breve";
+    el.textContent = testo;
+    document.body.appendChild(el);
+    setTimeout(() => el.remove(), 2600);
+  }
+
+  document.addEventListener("click", async e => {
+    if (!e.target.closest("[data-condividi]")) return;
+    const dati = {title: "Ordine Avvocati Potenza", text: "Bacheca annunci e albo degli iscritti", url: LINK_CONDIVISIONE};
+    if (navigator.share) {
+      try { await navigator.share(dati); } catch (err) {}
+      return;
+    }
+    try {
+      await navigator.clipboard.writeText(LINK_CONDIVISIONE);
+      avviso("Link copiato: " + LINK_CONDIVISIONE.replace("https://", ""));
+    } catch (err) {
+      prompt("Copia il link:", LINK_CONDIVISIONE);
+    }
+  });
 
   const installata = matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
   let rifiutato = false;

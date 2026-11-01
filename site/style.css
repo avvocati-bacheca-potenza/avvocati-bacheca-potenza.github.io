@@ -193,6 +193,19 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--b
 .ingrandita img { max-width: 100%; max-height: 100%; border-radius: 6px; box-shadow: 0 12px 48px rgba(0,0,0,.5); cursor: default; }
 .ingrandita .chiudi { top: 10px; right: 16px; font-size: 34px; }
 
+/* Pulsante "Condividi" nella barra di navigazione */
+.nav-condividi {
+  display: inline-flex; align-items: center; gap: 6px; margin-left: 4px;
+  font: 600 14px var(--sans); color: #fff; background: var(--rosso); border: 0; border-radius: 6px;
+  padding: 9px 14px; cursor: pointer;
+}
+.nav-condividi:hover { background: var(--rosso-scuro); }
+.avviso-breve {
+  position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom)); transform: translateX(-50%); z-index: 40;
+  background: var(--navy); color: #fff; font-size: 14px; padding: 10px 16px; border-radius: 8px;
+  box-shadow: 0 8px 28px rgba(15,35,71,.3);
+}
+
 /* Invito a installare la web app (prima visita) */
 .installa {
   position: fixed; left: 16px; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 25;
