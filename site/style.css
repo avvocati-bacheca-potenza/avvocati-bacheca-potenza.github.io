@@ -175,15 +175,23 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--b
              padding: 1px 5px; margin-right: 8px; border-radius: 3px; border: 1px solid var(--rosso); color: var(--rosso); vertical-align: 1px; }
 .dim { color: var(--tenue); font-size: 12.5px; }
 
-/* Annunci con immagine: testo a sinistra, locandina a destra (sotto, su schermi stretti) */
-.con-immagine { display: grid; grid-template-columns: 1fr 260px; gap: 22px; align-items: start; }
-.annuncio-img { display: block; border-radius: 8px; overflow: hidden; border: 1px solid var(--bordo); box-shadow: var(--ombra); }
+/* Annunci con immagine: testo a sinistra, piccola anteprima a destra; al clic si ingrandisce */
+.con-immagine { display: grid; grid-template-columns: 1fr 110px; gap: 20px; align-items: start; }
+.annuncio-img { position: relative; display: block; border-radius: 6px; overflow: hidden; border: 1px solid var(--bordo);
+                box-shadow: var(--ombra); cursor: zoom-in; }
 .annuncio-img img { display: block; width: 100%; height: auto; }
+.annuncio-img .lente { position: absolute; left: 0; right: 0; bottom: 0; padding: 4px 0; text-align: center;
+                       font-size: 11px; font-weight: 600; color: #fff; background: rgba(15,35,71,.78); }
 .annuncio-img:hover { border-color: var(--blu); }
 @media (max-width: 760px) {
-  .con-immagine { grid-template-columns: 1fr; }
-  .annuncio-img { max-width: 360px; }
+  .con-immagine { grid-template-columns: 1fr 84px; gap: 14px; }
 }
+
+.ingrandita { position: fixed; inset: 0; z-index: 30; background: rgba(10,20,40,.88);
+              display: flex; align-items: center; justify-content: center; padding: 48px 16px 16px; cursor: zoom-out; }
+.ingrandita[hidden] { display: none; }
+.ingrandita img { max-width: 100%; max-height: 100%; border-radius: 6px; box-shadow: 0 12px 48px rgba(0,0,0,.5); cursor: default; }
+.ingrandita .chiudi { top: 10px; right: 16px; font-size: 34px; }
 
 /* Albo ufficiale incorporato */
 .albo-box { overflow: hidden; }

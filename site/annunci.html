@@ -47,6 +47,11 @@
   </div>
 </main>
 
+<div class="ingrandita" id="ingrandita" role="dialog" aria-modal="true" aria-label="Immagine ingrandita" hidden>
+  <button class="chiudi" aria-label="Chiudi">&times;</button>
+  <img id="ingrandita-img" alt="">
+</div>
+
 <footer class="piede-pagina">
   <div class="contenitore">
     <span>Notizie tratte da <a href="https://www.ordineavvocatipotenza.it/" target="_blank" rel="noopener">ordineavvocatipotenza.it</a>, che resta la fonte ufficiale. Servizio non ufficiale.</span>
@@ -97,8 +102,8 @@ function voceHtml(v) {
     <h3>${esc(v.titolo)}</h3>
     <div class="${v.immagine ? "con-immagine" : ""}">
       <p>${esc(v.testo)}</p>
-      ${v.immagine ? `<a class="annuncio-img" href="${esc(v.immagine)}" target="_blank" rel="noopener" title="Apri l'immagine a grandezza intera">
-        <img src="${esc(v.immagine)}" alt="${esc(v.immagine_alt || v.titolo)}" loading="lazy"></a>` : ""}
+      ${v.immagine ? `<a class="annuncio-img" href="${esc(v.immagine)}" data-ingrandisci title="Clicca per ingrandire">
+        <img src="${esc(v.immagine)}" alt="${esc(v.immagine_alt || v.titolo)}" loading="lazy"><span class="lente">Ingrandisci</span></a>` : ""}
     </div>
     <div class="piede">
       ${v.autore ? `<span>A cura di ${esc(v.autore)}</span>` : ""}
@@ -167,6 +172,21 @@ $("#filtri").addEventListener("click", e => {
 });
 $("#cerca").addEventListener("input", () => { visibili = PASSO; mostra(); });
 $("#mostra-altri").addEventListener("click", () => { visibili += PASSO; mostra(); });
+
+// Ingrandimento delle immagini degli annunci in sovrimpressione.
+$("#annunci").addEventListener("click", e => {
+  const a = e.target.closest("[data-ingrandisci]");
+  if (!a) return;
+  e.preventDefault();
+  const img = a.querySelector("img");
+  $("#ingrandita-img").src = a.href;
+  $("#ingrandita-img").alt = img.alt;
+  $("#ingrandita").hidden = false;
+  $("#ingrandita .chiudi").focus();
+});
+function chiudiIngrandita() { $("#ingrandita").hidden = true; $("#ingrandita-img").src = ""; }
+$("#ingrandita").addEventListener("click", e => { if (e.target.id !== "ingrandita-img") chiudiIngrandita(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") chiudiIngrandita(); });
 </script>
 </body>
 </html>
