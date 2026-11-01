@@ -7,6 +7,14 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.ico">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0f2347">
+<meta name="description" content="Albo degli iscritti e bacheca annunci dell'Ordine degli Avvocati di Potenza">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Avvocati PZ">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -188,5 +196,6 @@ function chiudiIngrandita() { $("#ingrandita").hidden = true; $("#ingrandita-img
 $("#ingrandita").addEventListener("click", e => { if (e.target.id !== "ingrandita-img") chiudiIngrandita(); });
 document.addEventListener("keydown", e => { if (e.key === "Escape") chiudiIngrandita(); });
 </script>
+<script src="app.js" defer></script>
 </body>
 </html>

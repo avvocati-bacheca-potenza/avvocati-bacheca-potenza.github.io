@@ -1,0 +1,16 @@
+{
+  "name": "Ordine Avvocati Potenza",
+  "short_name": "Avvocati PZ",
+  "description": "Albo degli iscritti e bacheca annunci dell'Ordine degli Avvocati di Potenza",
+  "lang": "it",
+  "start_url": "./annunci.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0f2347",
+  "theme_color": "#0f2347",
+  "icons": [
+    { "src": "img/icona-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "img/icona-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "img/icona-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
