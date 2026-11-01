@@ -1,0 +1,57 @@
+# Pubblica il sito su GitHub Pages e, ogni 30 minuti, importa le nuove notizie
+# dal sito www.ordineavvocatipotenza.it (site/data/notizie.json).
+name: Aggiorna e pubblica
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  aggiorna:
+    runs-on: ubuntu-latest
+    outputs:
+      modificato: ${{ steps.notizie.outputs.modificato }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Controlla le notizie dell'Ordine
+        id: notizie
+        run: python3 scripts/aggiorna_notizie.py >> "$GITHUB_OUTPUT"
+
+      - name: Salva le notizie nuove
+        if: steps.notizie.outputs.modificato == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add site/data/notizie.json
+          git commit -m "Notizie dall'Ordine aggiornate"
+          git push
+
+      - name: Prepara il sito
+        if: github.event_name != 'schedule' || steps.notizie.outputs.modificato == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  pubblica:
+    needs: aggiorna
+    if: github.event_name != 'schedule' || needs.aggiorna.outputs.modificato == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

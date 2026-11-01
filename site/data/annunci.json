@@ -1,0 +1,34 @@
+{
+  "categorie": [
+    "Uffici giudiziari",
+    "Udienze e rinvii",
+    "Formazione",
+    "Bandi e incarichi",
+    "Sostituzioni e colleghi",
+    "Varie"
+  ],
+  "annunci": [
+    {
+      "id": 4,
+      "titolo": "Scuola forense distrettuale di Basilicata",
+      "testo": "Il Consiglio dell'Ordine degli Avvocati di Potenza, unitamente a quelli di Matera e Lagonegro, annunciano con grande soddisfazione l'inserimento della Scuola distrettuale di Basilicata tra le scuole accreditate presso il Consiglio Nazionale Forense.",
+      "categoria": "Formazione",
+      "autore": null,
+      "link": null,
+      "in_evidenza": true,
+      "pubblicato_il": "2026-11-01",
+      "scade_il": null
+    },
+    {
+      "id": 3,
+      "titolo": "Lutto",
+      "testo": "Il Presidente e tutto il Consiglio, unitamente a tutti gli iscritti, partecipa al dolore della Famiglia Iudicello per la scomparsa di GIAMPIERO",
+      "categoria": "Varie",
+      "autore": null,
+      "link": null,
+      "in_evidenza": true,
+      "pubblicato_il": "2026-11-01",
+      "scade_il": null
+    }
+  ]
+}
