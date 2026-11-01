@@ -95,7 +95,11 @@ function voceHtml(v) {
       <span>${data(v.data)}</span>
     </div>
     <h3>${esc(v.titolo)}</h3>
-    <p>${esc(v.testo)}</p>
+    <div class="${v.immagine ? "con-immagine" : ""}">
+      <p>${esc(v.testo)}</p>
+      ${v.immagine ? `<a class="annuncio-img" href="${esc(v.immagine)}" target="_blank" rel="noopener" title="Apri l'immagine a grandezza intera">
+        <img src="${esc(v.immagine)}" alt="${esc(v.immagine_alt || v.titolo)}" loading="lazy"></a>` : ""}
+    </div>
     <div class="piede">
       ${v.autore ? `<span>A cura di ${esc(v.autore)}</span>` : ""}
       ${v.scade_il ? `<span>Valido fino al ${data(v.scade_il)}</span>` : ""}

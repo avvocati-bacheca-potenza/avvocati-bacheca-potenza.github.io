@@ -175,6 +175,16 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--b
              padding: 1px 5px; margin-right: 8px; border-radius: 3px; border: 1px solid var(--rosso); color: var(--rosso); vertical-align: 1px; }
 .dim { color: var(--tenue); font-size: 12.5px; }
 
+/* Annunci con immagine: testo a sinistra, locandina a destra (sotto, su schermi stretti) */
+.con-immagine { display: grid; grid-template-columns: 1fr 260px; gap: 22px; align-items: start; }
+.annuncio-img { display: block; border-radius: 8px; overflow: hidden; border: 1px solid var(--bordo); box-shadow: var(--ombra); }
+.annuncio-img img { display: block; width: 100%; height: auto; }
+.annuncio-img:hover { border-color: var(--blu); }
+@media (max-width: 760px) {
+  .con-immagine { grid-template-columns: 1fr; }
+  .annuncio-img { max-width: 360px; }
+}
+
 /* Albo ufficiale incorporato */
 .albo-box { overflow: hidden; }
 .albo-frame { display: block; width: 100%; height: 1000px; border: 0; background: #fff; }
