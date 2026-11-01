@@ -9,6 +9,19 @@
   ],
   "annunci": [
     {
+      "id": 6,
+      "titolo": "Dibattito: «Fine Vita» — profili etici, medico-legali e giuridici",
+      "testo": "Sabato 7 novembre 2026, ore 17:00\nBiblomediateca – Casa delle Associazioni, Via Mario Pagano 3, Paterno (PZ)\n\nOrganizzato dall'Associazione socio-culturale UNITRE di Paterno.\nEvento accreditato dall'Ordine degli Avvocati di Potenza ai fini della formazione professionale continua.",
+      "categoria": "Formazione",
+      "autore": null,
+      "link": null,
+      "immagine": "img/fine-vita-2026-11-07.jpg",
+      "immagine_alt": "Locandina del dibattito «Fine Vita» del 7 novembre 2026 a Paterno",
+      "in_evidenza": false,
+      "pubblicato_il": "2026-11-01",
+      "scade_il": "2026-11-07"
+    },
+    {
       "id": 5,
       "titolo": "Convegno: Rischi e profili deontologici della professione forense — le responsabilità dell'avvocato e l'obbligo assicurativo",
       "testo": "Giovedì 12 novembre 2026, ore 15:30\nPalazzo di Giustizia di Potenza, Aula Grippo\n\nIscrizione mediante il sistema Riconosco. L'evento è accreditato ai fini della formazione professionale continua con il riconoscimento di n. 3 crediti in materia obbligatoria.",
