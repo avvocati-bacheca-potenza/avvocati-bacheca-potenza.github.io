@@ -252,6 +252,17 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--b
 .recapiti-riga .etichetta { font-size: 11.5px; font-weight: 700; letter-spacing: .7px; text-transform: uppercase; color: var(--tenue); }
 .recapiti-riga a { grid-column: 2; font-size: 14px; font-weight: 600; color: var(--navy); text-decoration: none; white-space: nowrap; line-height: 1.4; }
 .recapiti-riga a:hover { color: var(--rosso); text-decoration: underline; }
+.recapiti-riga .valore { grid-column: 2; font-size: 14px; font-weight: 600; color: var(--navy); line-height: 1.4; }
+/* Variante con sette voci (mediazione): su schermi larghi due righe da quattro slot */
+@media (min-width: 1101px) {
+  .recapiti-riga.fitta { grid-template-columns: minmax(0, .95fr) minmax(0, .6fr) minmax(0, 1.4fr) minmax(0, 1.5fr); }
+  .recapiti-riga.fitta li { border-left: 1px solid var(--bordo); border-top: 1px solid var(--bordo); }
+  .recapiti-riga.fitta li:nth-child(-n+4) { border-top: 0; }
+  .recapiti-riga.fitta li:nth-child(4n+1) { border-left: 0; }
+  .recapiti-riga.fitta li:last-child { grid-column: span 2; }
+  .recapiti-riga.fitta a { white-space: normal; overflow-wrap: anywhere; }
+}
+.recapiti-riga.fitta + .modulistica-box { margin-top: 20px; }
 /* Schermi medi: le cinque voci non stanno su una riga, si passa a due colonne */
 @media (max-width: 1100px) and (min-width: 561px) {
   .recapiti-riga { grid-template-columns: 1fr 1fr; }
@@ -313,7 +324,7 @@ main:has(.home-sezione) { padding-bottom: 56px; }
   .recapiti-riga li { grid-template-columns: 16px 74px 1fr; align-items: start; border-left: 0; border-top: 1px solid var(--bordo); padding: 12px 16px; }
   .recapiti-riga li:first-child { border-top: 0; }
   .recapiti-riga .etichetta { padding-top: 2px; }
-  .recapiti-riga a { grid-column: 3; white-space: normal; overflow-wrap: anywhere; }
+  .recapiti-riga a, .recapiti-riga .valore { grid-column: 3; white-space: normal; overflow-wrap: anywhere; }
   .mediazione-griglia { grid-template-columns: 1fr; }
 }
 @media (max-width: 560px) {
@@ -322,7 +333,8 @@ main:has(.home-sezione) { padding-bottom: 56px; }
   .nav-esteso { display: none; }
   .nav-condividi { font-size: 0; gap: 0; padding: 9px 11px; }
   .recapiti-riga li { padding: 14px; }
-  .recapiti-riga a { font-size: 14px; }
+  .recapiti-riga.fitta li { grid-template-columns: 16px 98px 1fr; padding: 12px 16px; }
+  .recapiti-riga a, .recapiti-riga .valore { font-size: 14px; }
   .contatti-lista, .dati-pagamento { grid-template-columns: 1fr; gap: 2px; }
   .contatti-lista dd, .dati-pagamento dd { margin-bottom: 8px; }
 }
