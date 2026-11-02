@@ -47,12 +47,15 @@
     const b = e.target.closest("[data-copia]");
     if (!b) return;
     const ok = await copia(b.dataset.copia);
-    const prima = b.dataset.etichetta || b.textContent;
-    b.dataset.etichetta = prima;
-    b.textContent = ok ? "Copiato ✓" : "Non copiato";
+    const msg = b.parentElement.querySelector(".copiato");
     b.classList.toggle("fatto", ok);
+    if (msg) {
+      msg.textContent = ok ? "✓ Copiato negli appunti" : "Non copiato: selezionalo e copialo a mano";
+      msg.classList.toggle("non-copiato", !ok);
+      msg.classList.add("visibile");
+    }
     clearTimeout(b._timer);
-    b._timer = setTimeout(() => { b.textContent = prima; b.classList.remove("fatto"); }, 1800);
+    b._timer = setTimeout(() => { b.classList.remove("fatto"); if (msg) msg.classList.remove("visibile"); }, 2200);
   });
 
   const installata = matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;

@@ -325,13 +325,20 @@ main:has(.home-sezione) { padding-bottom: 56px; }
 .dati-pagamento dt { margin-top: 8px; font-size: 11.5px; font-weight: 700; letter-spacing: .7px; text-transform: uppercase; color: var(--tenue); }
 .dati-pagamento dt:first-child { margin-top: 0; }
 .dati-pagamento dd { margin: 0; overflow-wrap: anywhere; }
-.con-copia { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
-.valore-copia { min-width: 0; overflow-wrap: anywhere; -webkit-user-select: all; user-select: all; }
-.copia { flex: none; padding: 3px 11px; font: 600 12.5px var(--sans); color: var(--blu); background: #fff;
-         border: 1px solid #cfd6e2; border-radius: 6px; cursor: pointer; }
-.copia:hover { background: var(--blu-chiaro); }
-.copia:focus-visible { outline: 2px solid var(--blu); outline-offset: 2px; }
-.copia.fatto { color: #1b6b3f; background: #e7f5ec; border-color: #7fbf9b; }
+.copia-box { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; margin-top: 3px; padding: 9px 12px;
+             font: inherit; text-align: left; color: var(--navy); background: #f6f8fb; border: 1px solid #cfd6e2; border-radius: 8px; cursor: pointer;
+             transition: background .15s, border-color .15s; }
+.copia-box:hover { background: var(--blu-chiaro); border-color: var(--blu); }
+.copia-box:focus-visible { outline: 2px solid var(--blu); outline-offset: 2px; }
+.copia-box .codice { font-size: 14px; overflow-wrap: anywhere; }
+.copia-box svg { width: 16px; height: 16px; flex: none; fill: none; stroke: var(--tenue); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.copia-box .i-ok { display: none; stroke: #1b6b3f; }
+.copia-box.fatto { background: #e7f5ec; border-color: #7fbf9b; }
+.copia-box.fatto .i-copia { display: none; }
+.copia-box.fatto .i-ok { display: block; }
+.copiato { display: block; min-height: 18px; margin-top: 4px; font-size: 12.5px; font-weight: 600; color: #1b6b3f; opacity: 0; transition: opacity .15s; }
+.copiato.visibile { opacity: 1; }
+.copiato.non-copiato { color: var(--rosso); }
 .codice { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 600; color: var(--navy); }
 .documenti { list-style: none; margin: 0 0 16px; padding: 0; display: grid; gap: 10px; font-size: 14.5px; }
 .documenti a { text-decoration: none; }
