@@ -31,6 +31,30 @@
     }
   });
 
+  // Pulsanti "Copia": copiano il valore negli appunti (con ripiego per i browser che non lo permettono).
+  async function copia(testo) {
+    try { await navigator.clipboard.writeText(testo); return true; } catch (err) {}
+    const t = document.createElement("textarea");
+    t.value = testo; t.setAttribute("readonly", ""); t.style.cssText = "position:fixed;top:0;left:0;opacity:0";
+    document.body.appendChild(t); t.select();
+    let ok = false;
+    try { ok = document.execCommand("copy"); } catch (err) {}
+    t.remove();
+    return ok;
+  }
+
+  document.addEventListener("click", async e => {
+    const b = e.target.closest("[data-copia]");
+    if (!b) return;
+    const ok = await copia(b.dataset.copia);
+    const prima = b.dataset.etichetta || b.textContent;
+    b.dataset.etichetta = prima;
+    b.textContent = ok ? "Copiato ✓" : "Non copiato";
+    b.classList.toggle("fatto", ok);
+    clearTimeout(b._timer);
+    b._timer = setTimeout(() => { b.textContent = prima; b.classList.remove("fatto"); }, 1800);
+  });
+
   const installata = matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
   let rifiutato = false;
   try { rifiutato = localStorage.getItem("installaRifiutato") === "1"; } catch (e) {}
