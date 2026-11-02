@@ -66,14 +66,33 @@ def da_bacheca():
                                  scarica(BACHECA), re.S)]
 
 
+def con_tentativi(fn, nome, tentativi=3):
+    """Esegue fn(); se il sito dell'Ordine ha un problema momentaneo riprova, altrimenti restituisce None."""
+    for i in range(1, tentativi + 1):
+        try:
+            return fn()
+        except (OSError, ET.ParseError, ValueError) as e:
+            print("Avviso: %s non disponibile (tentativo %d/%d): %s" % (nome, i, tentativi, e), file=sys.stderr)
+            if i < tentativi:
+                time.sleep(4)
+    return None
+
+
 def main():
     with open(FILE, encoding="utf-8") as f:
         stato = json.load(f)
     dal = stato["dal"]
     salvate = {n["link"]: n for n in stato["notizie"]}
 
-    raccolte = {n["link"]: n for n in da_bacheca()}
-    raccolte.update({n["link"]: n for n in da_rss()})  # il feed ha più dettagli
+    dalla_bacheca = con_tentativi(da_bacheca, "bacheca")
+    dal_feed = con_tentativi(da_rss, "feed RSS")
+    if dalla_bacheca is None and dal_feed is None:
+        # Il sito dell'Ordine non risponde: non è un motivo per bloccare la pubblicazione del sito.
+        print("modificato=false")
+        return
+
+    raccolte = {n["link"]: n for n in (dalla_bacheca or [])}
+    raccolte.update({n["link"]: n for n in (dal_feed or [])})  # il feed ha più dettagli
 
     adesso = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
     for link, n in raccolte.items():
