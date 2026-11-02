@@ -2,7 +2,9 @@
 
 Sito statico pubblicato con GitHub Pages: https://avvocati-bacheca-potenza.github.io
 
-- `site/index.html`: bacheca (pagina iniziale): notizie dell'Ordine + annunci di utilità.
+- `site/index.html`: home con logo, recapiti dell'Ordine e accesso ai servizi.
+- `site/bacheca.html`: bacheca: notizie dell'Ordine + annunci di utilità.
+- `site/mediazione.html`: Organismo di mediazione (istanze, costi, contatti, collegamento alla modulistica ufficiale).
 - `site/albo.html`: albo degli iscritti (modulo ufficiale dell'Albo online incorporato).
 - `site/annunci.html`: rimando alla bacheca per i vecchi link.
 - `site/data/annunci.json`: annunci della bacheca (si modificano qui).

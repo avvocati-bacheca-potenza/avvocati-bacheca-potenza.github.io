@@ -224,6 +224,92 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--b
   .testata { padding-top: env(safe-area-inset-top); }
 }
 
+/* Home: logo grande, recapiti, servizi */
+.home-hero { background: linear-gradient(180deg, var(--navy) 0, var(--blu) 100%); padding: 36px 0 96px; }
+.home-hero .contenitore { display: flex; justify-content: center; }
+.logo-grande {
+  width: min(320px, 72vw); height: auto; background: #fff; padding: 22px 30px; box-sizing: content-box;
+  border-radius: 16px; box-shadow: 0 16px 48px rgba(0,0,0,.28);
+}
+.home-sezione { margin-top: 36px; }
+.home-hero + main .home-sezione:first-child { margin-top: -56px; }
+.home-sezione h2 { font: 600 22px var(--serif); color: var(--navy); margin: 0 0 14px; }
+.home-hero + main .home-sezione:first-child h2 { color: #fff; }
+.recapiti { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.recapito {
+  display: flex; gap: 14px; align-items: flex-start; padding: 18px; background: var(--carta);
+  border: 1px solid var(--bordo); border-radius: var(--raggio); box-shadow: var(--ombra);
+  color: var(--testo); text-decoration: none; min-width: 0;
+}
+a.recapito:hover { border-color: var(--blu); color: var(--testo); }
+.recapito.largo { grid-column: span 3; }
+.recapito svg { width: 26px; height: 26px; flex: none; fill: none; stroke: var(--rosso); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; margin-top: 2px; }
+.recapito div { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.recapito strong { color: var(--navy); font-size: 16px; overflow-wrap: anywhere; }
+.recapito .etichetta { font-size: 11.5px; font-weight: 700; letter-spacing: .7px; text-transform: uppercase; color: var(--tenue); }
+.recapito div a { font-size: 14px; margin-top: 4px; }
+.servizi { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.servizio {
+  display: flex; flex-direction: column; gap: 6px; padding: 20px; background: var(--carta); text-decoration: none;
+  border: 1px solid var(--bordo); border-top: 4px solid var(--navy); border-radius: var(--raggio); box-shadow: var(--ombra); color: var(--testo);
+}
+.servizio:hover { border-top-color: var(--rosso); color: var(--testo); }
+.servizio strong { font: 600 19px var(--serif); color: var(--navy); }
+.servizio span { color: var(--tenue); font-size: 14px; flex: 1; }
+.servizio em { font-style: normal; font-weight: 600; color: var(--blu); font-size: 14px; }
+main:has(.home-sezione) { padding-bottom: 56px; }
+
+/* Mediazione */
+.modulistica-box { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap;
+                   padding: 20px 22px; border-left: 5px solid var(--rosso); }
+.modulistica-box div { display: flex; flex-direction: column; gap: 4px; }
+.modulistica-box strong { font: 600 19px var(--serif); color: var(--navy); }
+.modulistica-box span { color: var(--tenue); font-size: 14px; }
+.btn-grande { font-size: 15.5px; padding: 13px 22px; text-decoration: none; }
+.btn-grande:hover { color: #fff; }
+.mediazione-griglia { display: grid; grid-template-columns: 1fr 340px; gap: 20px; align-items: start; margin-top: 20px; }
+.mediazione-testo, .mediazione-lato { display: grid; gap: 20px; min-width: 0; }
+.mediazione-testo > *, .mediazione-lato > * { min-width: 0; }
+.sezione a { overflow-wrap: anywhere; }
+.sezione { padding: 22px 24px; }
+.sezione h2 { font: 600 20px var(--serif); color: var(--navy); margin: 0 0 12px; }
+.sezione h3 { font: 600 16px var(--sans); color: var(--navy); margin: 20px 0 6px; }
+.sezione p { margin: 0 0 10px; }
+.sezione .nota { font-size: 13px; color: var(--tenue); margin-top: 16px; }
+.passi { margin: 0; padding-left: 22px; display: grid; gap: 10px; }
+.passi ul { margin: 8px 0 0; padding-left: 18px; display: grid; gap: 4px; }
+.passi li::marker { color: var(--rosso); font-weight: 700; }
+.tabella-scorre { overflow-x: auto; margin: 6px 0 12px; }
+.tabella-costi { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+.tabella-costi th { text-align: left; font-size: 12px; text-transform: uppercase; letter-spacing: .5px; color: var(--tenue);
+                    padding: 10px 12px; background: #f8f9fc; border-bottom: 1px solid var(--bordo); }
+.tabella-costi td { padding: 10px 12px; border-bottom: 1px solid var(--bordo); }
+.tabella-costi td:not(:first-child) { font-weight: 600; color: var(--navy); white-space: nowrap; }
+.dati-pagamento, .contatti-lista { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: 8px 14px; font-size: 14.5px; }
+.dati-pagamento dt, .contatti-lista dt { font-weight: 600; color: var(--tenue); }
+.dati-pagamento dd, .contatti-lista dd { margin: 0; overflow-wrap: anywhere; }
+.codice { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 600; color: var(--navy); }
+.documenti { list-style: none; margin: 0 0 16px; padding: 0; display: grid; gap: 10px; font-size: 14.5px; }
+.documenti a { text-decoration: none; }
+.documenti a:hover { text-decoration: underline; }
+.tutta-larghezza { width: 100%; text-decoration: none; }
+
+@media (max-width: 860px) {
+  .recapiti, .servizi { grid-template-columns: 1fr 1fr; }
+  .recapito.largo { grid-column: span 2; }
+  .mediazione-griglia { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .nav { gap: 0; }
+  .nav a { padding: 8px 7px; font-size: 13.5px; }
+  .nav-esteso { display: none; }
+  .nav-condividi { font-size: 0; gap: 0; padding: 9px 11px; }
+  .recapiti, .servizi { grid-template-columns: 1fr; }
+  .recapito.largo { grid-column: auto; }
+  .contatti-lista, .dati-pagamento { grid-template-columns: 1fr; gap: 2px; }
+  .contatti-lista dd, .dati-pagamento dd { margin-bottom: 8px; }
+}
+
 /* Albo ufficiale incorporato */
 .albo-box { overflow: hidden; }
 .albo-frame { display: block; width: 100%; height: 1000px; border: 0; background: #fff; }
@@ -256,5 +342,8 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--b
   .tabella td { display: block; padding: 2px 0; border: 0; }
   .tabella td.foro { color: var(--tenue); font-size: 13px; }
   .filtri input { max-width: none; margin-left: 0; }
-  .nav { width: 100%; padding-bottom: 10px; }
+  .nav { width: 100%; padding-bottom: 10px; overflow-x: auto; flex-wrap: nowrap; scrollbar-width: none; }
+  .nav::-webkit-scrollbar { display: none; }
+  .nav a { white-space: nowrap; padding: 8px 11px; flex: none; }
+  .nav-condividi { flex: none; white-space: nowrap; padding: 8px 12px; margin-left: auto; }
 }

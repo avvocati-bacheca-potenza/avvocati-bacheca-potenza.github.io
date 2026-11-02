@@ -1,7 +1,7 @@
 {
   "name": "Ordine Avvocati Potenza",
   "short_name": "Avvocati PZ",
-  "description": "Albo degli iscritti e bacheca annunci dell'Ordine degli Avvocati di Potenza",
+  "description": "Recapiti, bacheca annunci, albo degli iscritti e organismo di mediazione dell'Ordine degli Avvocati di Potenza",
   "lang": "it",
   "start_url": "./",
   "scope": "./",
