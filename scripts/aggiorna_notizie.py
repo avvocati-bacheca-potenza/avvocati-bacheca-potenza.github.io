@@ -27,8 +27,8 @@ RSS = SITO + "/rss.xml"
 BACHECA = SITO + "/bacheca_home?page=0"
 FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "site", "data", "notizie.json")
 ITALIA = timezone(timedelta(hours=1))  # sufficiente per ricavare il giorno di pubblicazione
-GIORNI_FINESTRA = 30   # si importano le notizie pubblicate negli ultimi 30 giorni (poi la bacheca le nasconde)
-GIORNI_CONSERVA = 60   # e si cancellano quelle più vecchie di 60 giorni
+GIORNI_FINESTRA = 60   # si importano le notizie pubblicate negli ultimi 60 giorni
+GIORNI_CONSERVA = 60   # dopo 60 giorni dalla pubblicazione la notizia viene cancellata
 DETTAGLI_PER_GIRO = 15 # al massimo 15 pagine di notizia lette per volta, per non pesare sul sito
 # Le notizie che riguardano le udienze non vanno in bacheca: sono mostrate nella pagina Udienze.
 UDIENZE = re.compile(r"udienz|rinvii?\s+d.ufficio", re.I)

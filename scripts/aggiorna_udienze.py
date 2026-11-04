@@ -4,7 +4,8 @@ pubblicati su www.ordineavvocatipotenza.it (sezione "Trattazione udienze").
 
 Per ogni pagina di magistrato/collegio legge l'elenco degli allegati (PDF, DOC...),
 ricava dal nome del file il giorno (o i giorni) di udienza e classifica il documento
-in penale / civile / lavoro. Si conservano i documenti di udienze da 30 giorni fa in poi.
+in penale / civile / lavoro. Si conservano le udienze della settimana in corso e di quella precedente
+(ogni lunedì sparisce la settimana di due settimane prima) e quelle dei prossimi sei mesi.
 
 Eseguito da GitHub Actions (vedi .github/workflows/aggiorna.yml).
 Esce con codice 0 e stampa "modificato=true|false". Se il sito dell'Ordine non risponde
@@ -23,8 +24,7 @@ import urllib.request
 
 SITO = "https://www.ordineavvocatipotenza.it"
 FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "site", "data", "udienze.json")
-GIORNI_STORICO = 30      # documenti di udienze fino a 30 giorni fa
-GIORNI_FUTURO = 180      # e fino a sei mesi avanti
+GIORNI_FUTURO = 180      # udienze fino a sei mesi avanti
 PAUSA = 0.3              # secondi tra una pagina e l'altra, per non pesare sul sito
 TEMPO_MASSIMO = 420      # secondi: se il sito è lento ci si ferma e si tengono i dati già noti
 
@@ -152,7 +152,9 @@ def main():
         return
 
     oggi = datetime.date.today()
-    da, a = oggi - datetime.timedelta(days=GIORNI_STORICO), oggi + datetime.timedelta(days=GIORNI_FUTURO)
+    # Da lunedì della settimana scorsa: ogni settimana si tolgono le udienze di due settimane prima.
+    da = oggi - datetime.timedelta(days=oggi.weekday() + 7)
+    a = oggi + datetime.timedelta(days=GIORNI_FUTURO)
     adesso = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
     raccolti, pagine_ok = {}, 0
     inizio = time.time()

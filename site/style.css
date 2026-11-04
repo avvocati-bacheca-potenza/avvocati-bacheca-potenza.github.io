@@ -397,8 +397,7 @@ main:has(.home-sezione) { padding-bottom: 56px; }
 .segmento.attivo .conta { color: #fff; background: var(--rosso); }
 #uffici { border-bottom: 0; padding-top: 0; }
 #uffici:empty { display: none; }
-.passati { display: flex; align-items: center; gap: 8px; padding: 0 18px 12px; font-size: 13px; color: var(--tenue); cursor: pointer; }
-.passati input { width: auto; }
+.passati { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 0 18px 12px; font-size: 13px; color: var(--tenue); }
 .giorno { border-top: 1px solid var(--bordo); }
 .giorno-titolo { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 0; padding: 12px 18px; background: #f8f9fc;
                  font: 600 16px var(--serif); color: var(--navy); }

@@ -92,6 +92,7 @@ const oggi = () => { const d = new Date(); return new Date(d - d.getTimezoneOffs
 const PASSO = 25;
 // Regola della bacheca: ciò che non ha una scadenza propria resta visibile al massimo 30 giorni dalla pubblicazione.
 const GIORNI_IN_BACHECA = 30;
+const GIORNI_NOTIZIE_ORDINE = 60;  // le notizie dell'Ordine restano 60 giorni dalla pubblicazione
 const piuGiorni = (iso, n) => { const d = new Date(iso + "T00:00:00Z"); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); };
 const ultimoGiorno = (pubblicato, scade) => scade || piuGiorni(pubblicato, GIORNI_IN_BACHECA - 1);
 
@@ -149,7 +150,7 @@ function mostra() {
     (!filtro || (filtro === "ordine" ? v.fonte === "ordine" : v.categoria === filtro)) &&
     (!testo || [v.titolo, v.testo, v.autore, ...(v.allegati || []).map(a => a.nome)].join(" ").toLowerCase().includes(testo)));
   const vuoto = filtro === "ordine" && !testo
-    ? `<li class="stato"><strong>Nessuna notizia dall'Ordine</strong>Negli ultimi 30 giorni l'Ordine non ha pubblicato notizie, a parte quelle sulle udienze, che trovi nella pagina <a href="udienze.html">Udienze</a>. Compariranno qui automaticamente.</li>`
+    ? `<li class="stato"><strong>Nessuna notizia dall'Ordine</strong>Negli ultimi 60 giorni l'Ordine non ha pubblicato notizie, a parte quelle sulle udienze, che trovi nella pagina <a href="udienze.html">Udienze</a>. Compariranno qui automaticamente.</li>`
     : `<li class="stato"><strong>Nessun annuncio${filtro && filtro !== "ordine" ? " in «" + esc(filtro) + "»" : ""}</strong>Al momento non ci sono annunci${filtro && filtro !== "ordine" ? " in questa sezione" : " per questa ricerca"}.</li>`;
   $("#annunci").innerHTML = lista.length ? lista.slice(0, visibili).map(voceHtml).join("") : vuoto;
   $("#altro").hidden = lista.length <= visibili;
@@ -177,7 +178,7 @@ async function carica() {
     .map(x => ({...x, fonte: "locale", data: x.pubblicato_il || g}));
   // Le notizie sulle udienze sono nella pagina Udienze, non in bacheca.
   const ordine = n.notizie
-    .filter(x => x.tipo !== "udienze" && ultimoGiorno(x.data, null) >= g)
+    .filter(x => x.tipo !== "udienze" && piuGiorni(x.data, GIORNI_NOTIZIE_ORDINE - 1) >= g)
     .map(x => ({...x, fonte: "ordine"}));
   notizieDal = n.dal;
   voci = [...locali, ...ordine].sort((x, y) =>
@@ -189,7 +190,7 @@ async function carica() {
     a.categorie.filter(c => usate.has(c)).map(c => `<button class="chip ${filtro === c ? "attivo" : ""}" data-filtro="${esc(c)}" data-cat>${esc(c)}</button>`).join(""));
   const nuove = voci.filter(nuova).length;
   $("#stato-testo").innerHTML = (nuove ? `<strong class="testo-nuovo">${nuove} novità dall'Ordine dalla tua ultima visita</strong> · ` : "") +
-    "Notizie pubblicate dall'Ordine negli ultimi 30 giorni, escluse quelle sulle udienze · Controllo automatico ogni 30 minuti";
+    "Notizie dell'Ordine: restano 60 giorni dalla pubblicazione, escluse quelle sulle udienze · Controllo automatico ogni 30 minuti";
   mostra();
 }
 

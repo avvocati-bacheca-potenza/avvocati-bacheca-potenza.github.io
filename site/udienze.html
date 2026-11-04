@@ -69,7 +69,10 @@
         <input type="search" id="cerca" placeholder="Cerca magistrato o documento…" aria-label="Cerca magistrato o documento">
       </div>
       <div class="filtri" id="uffici" aria-label="Filtra per ufficio"></div>
-      <label class="passati"><input type="checkbox" id="passati"> Mostra anche i giorni passati (ultimi 30)</label>
+      <div class="passati">
+        <span>Dal giorno più recente al più vecchio. Restano la settimana in corso e la precedente: ogni lunedì si tolgono le più vecchie.</span>
+        <button type="button" class="chip" id="vai-oggi">↓ Vai a oggi</button>
+      </div>
 
       <div id="comunicazioni" hidden></div>
       <div id="giorni"><p class="stato">Caricamento…</p></div>
@@ -90,6 +93,8 @@ const oggi = () => { const d = new Date(); return new Date(d - d.getTimezoneOffs
 const piuGiorni = (iso, n) => { const d = new Date(iso + "T00:00:00Z"); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); };
 const maiuscola = s => s.charAt(0).toUpperCase() + s.slice(1);
 const giornoLungo = iso => maiuscola(new Date(iso + "T00:00:00").toLocaleDateString("it-IT", {weekday: "long", day: "numeric", month: "long", year: "numeric"}));
+// Si tengono la settimana in corso e quella precedente: la finestra parte dal lunedì della settimana scorsa.
+const inizioFinestra = () => { const g = oggi(), dow = (new Date(g + "T00:00:00Z").getUTCDay() + 6) % 7; return piuGiorni(g, -dow - 7); };
 const gruppoUfficio = u => /^Giudice di pace/.test(u) ? "Giudici di pace" : /GIP/.test(u) ? "GIP/GUP" : /Riesame/.test(u) ? "Riesame" : u;
 
 let ultimaVisita = null;
@@ -104,8 +109,8 @@ const inTipo = (d, t) => t === "civile" ? d.categoria !== "penale" : d.categoria
 const nuovo = d => ultimaVisita && d.rilevato_il && new Date(d.rilevato_il) > ultimaVisita;
 
 function visibili(conUfficio) {
-  const g = oggi(), testo = $("#cerca").value.trim().toLowerCase(), passati = $("#passati").checked;
-  return tutte.filter(d => (passati ? d.data >= piuGiorni(g, -30) : d.data >= g) &&
+  const testo = $("#cerca").value.trim().toLowerCase();
+  return tutte.filter(d => d.data >= inizioFinestra() &&
     (!conUfficio || !ufficio || gruppoUfficio(d.ufficio) === ufficio) &&
     (!testo || (d.magistrato + " " + d.ufficio + " " + d.titolo).toLowerCase().includes(testo)));
 }
@@ -136,15 +141,16 @@ function mostra() {
   const lista = visibili(true).filter(d => inTipo(d, tipo));
   if (!lista.length) {
     $("#giorni").innerHTML = `<p class="stato"><strong>Nessun documento di udienza ${tipo === "penale" ? "penale" : "civile"}</strong>
-      ${$("#passati").checked ? "Non ci sono documenti per questa ricerca." : "Non ci sono documenti da oggi in poi. Spunta «Mostra anche i giorni passati» per vedere gli ultimi."}</p>`;
+      Non ci sono documenti per questa ricerca.</p>`;
     return;
   }
   const perGiorno = {};
   lista.forEach(d => (perGiorno[d.data] = perGiorno[d.data] || []).push(d));
-  $("#giorni").innerHTML = Object.keys(perGiorno).sort().map(iso => {
+  // Ordine decrescente: prima il giorno più recente.
+  $("#giorni").innerHTML = Object.keys(perGiorno).sort().reverse().map(iso => {
     const righe = perGiorno[iso].sort((a, b) => a.ufficio.localeCompare(b.ufficio) || a.magistrato.localeCompare(b.magistrato) || a.titolo.localeCompare(b.titolo));
     const etichetta = iso === g ? "Oggi" : iso === piuGiorni(g, 1) ? "Domani" : iso < g ? "Passata" : "";
-    return `<section class="giorno ${iso < g ? "passato" : ""}">
+    return `<section class="giorno ${iso < g ? "passato" : ""}" data-giorno="${iso}">
       <h2 class="giorno-titolo"><span>${esc(giornoLungo(iso))}</span>${etichetta ? `<span class="etichetta-giorno ${iso === g ? "oggi" : ""}">${etichetta}</span>` : ""}
         <span class="conta">${righe.length} ${righe.length === 1 ? "documento" : "documenti"}</span></h2>
       <ul class="udienze-lista">${righe.map(rigaHtml).join("")}</ul></section>`;
@@ -165,7 +171,7 @@ async function caricaComunicazioni() {
   try {
     const r = await fetch("data/notizie.json", {cache: "no-cache"});
     if (!r.ok) throw new Error(r.status);
-    const n = await r.json(), limite = piuGiorni(oggi(), -30);
+    const n = await r.json(), limite = inizioFinestra();
     mostraComunicazioni((n.notizie || []).filter(x => x.tipo === "udienze" && x.data >= limite));
   } catch (e) { mostraComunicazioni([]); }
 }
@@ -196,7 +202,12 @@ document.querySelectorAll(".segmento").forEach(b => b.addEventListener("click", 
 }));
 $("#uffici").addEventListener("click", e => { const b = e.target.closest("[data-uff]"); if (b) { ufficio = b.dataset.uff; mostra(); } });
 $("#cerca").addEventListener("input", mostra);
-$("#passati").addEventListener("change", mostra);
+$("#vai-oggi").addEventListener("click", () => {
+  // Il giorno di oggi, oppure il più vicino nel passato se oggi non ci sono documenti.
+  const g = oggi(), sezioni = [...document.querySelectorAll(".giorno")];
+  const s = sezioni.find(x => x.dataset.giorno <= g);
+  if (s) s.scrollIntoView({block: "start"});
+});
 </script>
 <script src="app.js" defer></script>
 </body>
