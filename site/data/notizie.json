@@ -1,5 +1,71 @@
 {
-  "dal": "2026-11-01",
+  "dal": "2026-10-05",
   "fonte": "https://www.ordineavvocatipotenza.it",
-  "notizie": []
+  "notizie": [
+    {
+      "link": "https://www.ordineavvocatipotenza.it/scuola-di-specializzazione-diritto-sindacale-del-lavoro-e-della-previdenza",
+      "titolo": "SCUOLA DI SPECIALIZZAZIONE IN DIRITTO SINDACALE DEL LAVORO E DELLA PREVIDENZA",
+      "data": "2026-10-30",
+      "testo": null,
+      "allegati": [
+        {
+          "nome": "Avviso di selezione Scuola_26_27.pdf",
+          "url": "https://www.ordineavvocatipotenza.it/sites/default/files/Avviso%20di%20selezione%20Scuola_26_27.pdf",
+          "dimensione": "488.99 KB"
+        },
+        {
+          "nome": "ManifestoDirittoSindacale26_27.pdf",
+          "url": "https://www.ordineavvocatipotenza.it/sites/default/files/ManifestoDirittoSindacale26_27.pdf",
+          "dimensione": "593.7 KB"
+        }
+      ],
+      "rilevato_il": "2026-10-30T12:00:00Z",
+      "tipo": "generale"
+    },
+    {
+      "link": "https://www.ordineavvocatipotenza.it/ministero-della-giustiza-prosecuzione-ed-estensione-della-sperimentazione-del-portale-deposito-atti",
+      "titolo": "MINISTERO DELLA GIUSTIZA - PROSECUZIONE ED ESTENSIONE DELLA SPERIMENTAZIONE DEL PORTALE DEPOSITO ATTI PENALI 2.0",
+      "data": "2026-10-21",
+      "testo": null,
+      "allegati": [
+        {
+          "nome": "NOTA PER UFFICI E AVVOCATI - POTENZA - PDP 2.0_v.1.1 _signed (3).pdf",
+          "url": "https://www.ordineavvocatipotenza.it/sites/default/files/NOTA%20PER%20UFFICI%20E%20AVVOCATI%20-%20POTENZA%20-%20PDP%202.0_v.1.1%20_signed%20%283%29_0.pdf",
+          "dimensione": "319.2 KB"
+        }
+      ],
+      "rilevato_il": "2026-10-21T12:00:00Z",
+      "tipo": "generale"
+    },
+    {
+      "link": "https://www.ordineavvocatipotenza.it/ddg-asp-n-202600933-del-16102026-notifica",
+      "titolo": "DDG ASP N. 2026/00933 Del 16/10/2026 - NOTIFICA",
+      "data": "2026-10-20",
+      "testo": null,
+      "allegati": [
+        {
+          "nome": "documento_1792404138389 (1).pdf",
+          "url": "https://www.ordineavvocatipotenza.it/sites/default/files/documento_1792404138389%20%281%29.pdf",
+          "dimensione": "331.36 KB"
+        }
+      ],
+      "rilevato_il": "2026-10-20T12:00:00Z",
+      "tipo": "generale"
+    },
+    {
+      "link": "https://www.ordineavvocatipotenza.it/attivazione-servizio-di-help-desk-straordinario-%E2%80%93-piattaforma-gestionale-difese-dufficio-gdu",
+      "titolo": "ATTIVAZIONE SERVIZIO DI HELP DESK STRAORDINARIO – PIATTAFORMA GESTIONALE DIFESE D'UFFICIO (GDU)",
+      "data": "2026-10-12",
+      "testo": null,
+      "allegati": [
+        {
+          "nome": "20261012105612251.pdf",
+          "url": "https://www.ordineavvocatipotenza.it/sites/default/files/20261012105612251.pdf",
+          "dimensione": "31.28 KB"
+        }
+      ],
+      "rilevato_il": "2026-10-12T12:00:00Z",
+      "tipo": "generale"
+    }
+  ]
 }

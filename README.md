@@ -9,7 +9,7 @@ Sito statico pubblicato con GitHub Pages: https://avvocati-bacheca-potenza.githu
 - `site/albo.html`: albo degli iscritti (modulo ufficiale dell'Albo online incorporato).
 - `site/annunci.html`: rimando alla bacheca per i vecchi link.
 - `site/data/annunci.json`: annunci della bacheca (si modificano qui).
-- `site/data/notizie.json`: notizie importate automaticamente da www.ordineavvocatipotenza.it.
+- `site/data/notizie.json`: notizie pubblicate da www.ordineavvocatipotenza.it negli ultimi 30 giorni, importate automaticamente con i loro documenti. Quelle che riguardano le udienze (`tipo: "udienze"`) non vanno in bacheca ma nella pagina Udienze.
 - `site/data/udienze.json` e `scripts/aggiorna_udienze.py`: leggono le 63 pagine dei magistrati, ricavano il giorno di udienza dal nome del file e salvano gli ultimi 30 giorni e i prossimi sei mesi (controllo ogni ora).
 - `scripts/aggiorna_notizie.py`: legge RSS e bacheca dell'Ordine e aggiorna `notizie.json`.
 - `.github/workflows/aggiorna.yml`: ogni 30 minuti controlla le notizie; a ogni modifica ripubblica il sito.

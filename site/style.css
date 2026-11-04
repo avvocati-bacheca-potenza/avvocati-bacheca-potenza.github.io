@@ -422,6 +422,16 @@ main:has(.home-sezione) { padding-bottom: 56px; }
   .udienza .doc { grid-column: 1 / -1; }
 }
 
+.com-titolo { margin: 0; padding: 12px 18px; background: #fff7e6; border-top: 1px solid var(--bordo); border-left: 4px solid var(--rosso);
+              font: 600 15px var(--serif); color: var(--navy); }
+.com-lista { list-style: none; margin: 0; padding: 0 18px 4px; background: #fffdf7; }
+.com-lista > li { display: grid; grid-template-columns: 64px 1fr; gap: 12px; padding: 10px 0; border-top: 1px solid var(--bordo); font-size: 14px; }
+.com-lista > li:first-child { border-top: 0; }
+.com-data { font-weight: 700; color: var(--rosso); font-size: 13px; }
+.com-link { font-weight: 600; color: var(--navy); text-decoration: none; }
+.com-link:hover { text-decoration: underline; }
+.com-lista .allegati { margin-top: 6px; }
+
 /* Albo ufficiale incorporato */
 .albo-box { overflow: hidden; }
 .albo-frame { display: block; width: 100%; height: 1000px; border: 0; background: #fff; }

@@ -71,6 +71,7 @@
       <div class="filtri" id="uffici" aria-label="Filtra per ufficio"></div>
       <label class="passati"><input type="checkbox" id="passati"> Mostra anche i giorni passati (ultimi 30)</label>
 
+      <div id="comunicazioni" hidden></div>
       <div id="giorni"><p class="stato">Caricamento…</p></div>
     </div>
   </div>
@@ -150,7 +151,27 @@ function mostra() {
   }).join("");
 }
 
+// Notizie dell'Ordine che riguardano le udienze (escluse dalla bacheca): ultimi 30 giorni.
+function mostraComunicazioni(lista) {
+  const box = $("#comunicazioni");
+  box.hidden = !lista.length;
+  box.innerHTML = lista.length ? `<h2 class="com-titolo">Comunicazioni dell'Ordine sulle udienze</h2><ul class="com-lista">` +
+    lista.map(n => `<li><span class="com-data">${esc(new Date(n.data + "T00:00:00").toLocaleDateString("it-IT", {day: "numeric", month: "short"}))}</span>
+      <div><a class="com-link" href="${esc(n.link)}" target="_blank" rel="noopener">${esc(n.titolo)}</a>
+      ${(n.allegati || []).length ? `<ul class="allegati">${n.allegati.map(a => `<li><a href="${esc(a.url)}" target="_blank" rel="noopener"><span class="tipo-file">${esc((a.nome.split(".").pop() || "file").slice(0, 4))}</span>${esc(a.nome)}</a>${a.dimensione ? ` <span class="dim">${esc(a.dimensione)}</span>` : ""}</li>`).join("")}</ul>` : ""}</div></li>`).join("") + "</ul>" : "";
+}
+
+async function caricaComunicazioni() {
+  try {
+    const r = await fetch("data/notizie.json", {cache: "no-cache"});
+    if (!r.ok) throw new Error(r.status);
+    const n = await r.json(), limite = piuGiorni(oggi(), -30);
+    mostraComunicazioni((n.notizie || []).filter(x => x.tipo === "udienze" && x.data >= limite));
+  } catch (e) { mostraComunicazioni([]); }
+}
+
 async function carica() {
+  caricaComunicazioni();
   try {
     const r = await fetch("data/udienze.json", {cache: "no-cache"});
     if (!r.ok) throw new Error(r.status);
