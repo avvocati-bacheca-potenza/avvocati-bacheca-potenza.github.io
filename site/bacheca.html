@@ -150,7 +150,7 @@ function mostra() {
     (!testo || [v.titolo, v.testo, v.autore, ...(v.allegati || []).map(a => a.nome)].join(" ").toLowerCase().includes(testo)));
   const vuoto = filtro === "ordine" && !testo
     ? `<li class="stato"><strong>Nessuna notizia dall'Ordine</strong>Negli ultimi 30 giorni l'Ordine non ha pubblicato notizie, a parte quelle sulle udienze, che trovi nella pagina <a href="udienze.html">Udienze</a>. Compariranno qui automaticamente.</li>`
-    : '<li class="stato"><strong>Nessun annuncio</strong>Non ci sono annunci per questo filtro.</li>';
+    : `<li class="stato"><strong>Nessun annuncio${filtro && filtro !== "ordine" ? " in «" + esc(filtro) + "»" : ""}</strong>Al momento non ci sono annunci${filtro && filtro !== "ordine" ? " in questa sezione" : " per questa ricerca"}.</li>`;
   $("#annunci").innerHTML = lista.length ? lista.slice(0, visibili).map(voceHtml).join("") : vuoto;
   $("#altro").hidden = lista.length <= visibili;
 }
@@ -182,7 +182,8 @@ async function carica() {
   notizieDal = n.dal;
   voci = [...locali, ...ordine].sort((x, y) =>
     (y.in_evidenza ? 1 : 0) - (x.in_evidenza ? 1 : 0) || y.data.localeCompare(x.data));
-  const usate = new Set(locali.map(x => x.categoria));
+  // La sezione «Varie» resta sempre visibile, anche quando non ha annunci; le altre compaiono solo se ne hanno.
+  const usate = new Set([...locali.map(x => x.categoria), "Varie"]);
   document.querySelectorAll(".chip[data-cat]").forEach(c => c.remove());
   $("#cerca").insertAdjacentHTML("beforebegin",
     a.categorie.filter(c => usate.has(c)).map(c => `<button class="chip ${filtro === c ? "attivo" : ""}" data-filtro="${esc(c)}" data-cat>${esc(c)}</button>`).join(""));
