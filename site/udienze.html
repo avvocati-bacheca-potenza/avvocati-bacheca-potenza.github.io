@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Udienze · Ordine Avvocati Potenza</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.ico">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0f2347">
+<meta name="description" content="Documenti di trattazione delle udienze penali e civili pubblicati dall'Ordine degli Avvocati di Potenza, giorno per giorno">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Avvocati PZ">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://avvocati-bacheca-potenza.github.io/udienze.html">
+<link rel="canonical" href="https://avvocati-bacheca-potenza.github.io/udienze.html">
+<meta property="og:site_name" content="Ordine Avvocati Potenza">
+<meta property="og:locale" content="it_IT">
+<meta property="og:title" content="Udienze · Ordine Avvocati Potenza">
+<meta property="og:description" content="Documenti di trattazione delle udienze penali e civili, giorno per giorno.">
+<meta property="og:image" content="https://avvocati-bacheca-potenza.github.io/img/anteprima-social.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ordine Avvocati Potenza — bacheca annunci e albo degli iscritti">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="testata">
+  <div class="contenitore">
+    <a class="marchio" href="./">
+      <img class="stemma" src="img/logo.png" alt="Logo Ordine degli Avvocati di Potenza" width="191" height="160">
+      <span class="marchio-testo"><strong>Ordine Avvocati Potenza</strong><span>Bacheca e servizi</span></span>
+    </a>
+    <nav class="nav">
+      <a href="./">Home</a>
+      <a href="bacheca.html">Bacheca</a>
+      <a href="udienze.html" aria-current="page">Udienze</a>
+      <a href="albo.html">Albo<span class="nav-esteso"> iscritti</span></a>
+      <a href="mediazione.html">Mediazione</a>
+      <button class="nav-condividi" type="button" data-condividi aria-label="Condividi il link">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v13"/><path d="M7 8l5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>
+        Condividi</button>
+    </nav>
+  </div>
+</header>
+
+<section class="intro">
+  <div class="contenitore">
+    <h1>Udienze</h1>
+    <p>I documenti di trattazione delle udienze pubblicati sul sito dell'Ordine per ciascun magistrato, raccolti giorno per giorno in penale e civile.</p>
+  </div>
+</section>
+
+<main>
+  <div class="contenitore sovrapposto">
+    <div class="scheda-box">
+      <div class="barra-stato"><span id="stato-testo">Caricamento…</span></div>
+
+      <div class="udienze-comandi">
+        <div class="segmenti" role="tablist" aria-label="Tipo di udienza">
+          <button class="segmento attivo" role="tab" aria-selected="true" data-tipo="penale">Penale <span class="conta" id="n-penale">0</span></button>
+          <button class="segmento" role="tab" aria-selected="false" data-tipo="civile">Civile <span class="conta" id="n-civile">0</span></button>
+        </div>
+        <input type="search" id="cerca" placeholder="Cerca magistrato o documento…" aria-label="Cerca magistrato o documento">
+      </div>
+      <div class="filtri" id="uffici" aria-label="Filtra per ufficio"></div>
+      <label class="passati"><input type="checkbox" id="passati"> Mostra anche i giorni passati (ultimi 30)</label>
+
+      <div id="giorni"><p class="stato">Caricamento…</p></div>
+    </div>
+  </div>
+</main>
+
+<footer class="piede-pagina">
+  <div class="contenitore">
+    <span>Documenti tratti dalla sezione <a href="https://www.ordineavvocatipotenza.it/trattazione-udienze" target="_blank" rel="noopener">Trattazione udienze</a> del sito ufficiale dell'Ordine, che resta la fonte di riferimento. Servizio non ufficiale.</span>
+  </div>
+</footer>
+
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const oggi = () => { const d = new Date(); return new Date(d - d.getTimezoneOffset() * 60000).toISOString().slice(0, 10); };
+const piuGiorni = (iso, n) => { const d = new Date(iso + "T00:00:00Z"); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); };
+const maiuscola = s => s.charAt(0).toUpperCase() + s.slice(1);
+const giornoLungo = iso => maiuscola(new Date(iso + "T00:00:00").toLocaleDateString("it-IT", {weekday: "long", day: "numeric", month: "long", year: "numeric"}));
+const gruppoUfficio = u => /^Giudice di pace/.test(u) ? "Giudici di pace" : /GIP/.test(u) ? "GIP/GUP" : /Riesame/.test(u) ? "Riesame" : u;
+
+let ultimaVisita = null;
+try {
+  ultimaVisita = localStorage.getItem("ultimaVisitaUdienze");
+  localStorage.setItem("ultimaVisitaUdienze", new Date().toISOString());
+} catch (e) {}
+ultimaVisita = ultimaVisita ? new Date(ultimaVisita) : null;
+
+let tutte = [], tipo = "penale", ufficio = "";
+const inTipo = (d, t) => t === "civile" ? d.categoria !== "penale" : d.categoria === "penale";
+const nuovo = d => ultimaVisita && d.rilevato_il && new Date(d.rilevato_il) > ultimaVisita;
+
+function visibili(conUfficio) {
+  const g = oggi(), testo = $("#cerca").value.trim().toLowerCase(), passati = $("#passati").checked;
+  return tutte.filter(d => (passati ? d.data >= piuGiorni(g, -30) : d.data >= g) &&
+    (!conUfficio || !ufficio || gruppoUfficio(d.ufficio) === ufficio) &&
+    (!testo || (d.magistrato + " " + d.ufficio + " " + d.titolo).toLowerCase().includes(testo)));
+}
+
+function rigaHtml(d) {
+  const ext = (d.url.split(".").pop() || "file").toLowerCase().slice(0, 4);
+  return `<li class="udienza">
+    <div class="chi"><strong>${esc(d.magistrato || d.ufficio)}</strong>
+      <span class="uff">${d.magistrato ? esc(d.ufficio) : ""}${d.categoria === "lavoro" ? ' <span class="pill-lavoro">Lavoro</span>' : ""}</span></div>
+    <a class="doc" href="${esc(d.url)}" target="_blank" rel="noopener"><span class="tipo-file">${esc(ext)}</span>${esc(d.titolo)}</a>
+    ${nuovo(d) ? '<span class="badge-nuovo">Nuovo</span>' : ""}
+  </li>`;
+}
+
+function mostra() {
+  const g = oggi();
+  $("#n-penale").textContent = visibili(false).filter(d => inTipo(d, "penale")).length;
+  $("#n-civile").textContent = visibili(false).filter(d => inTipo(d, "civile")).length;
+
+  const inQuestoTipo = visibili(false).filter(d => inTipo(d, tipo));
+  const gruppi = [...new Set(inQuestoTipo.map(d => gruppoUfficio(d.ufficio)))].sort();
+  if (ufficio && !gruppi.includes(ufficio)) ufficio = "";
+  $("#uffici").innerHTML = gruppi.length > 1
+    ? `<button class="chip ${ufficio ? "" : "attivo"}" data-uff="">Tutti gli uffici</button>` +
+      gruppi.map(u => `<button class="chip ${ufficio === u ? "attivo" : ""}" data-uff="${esc(u)}">${esc(u)}</button>`).join("")
+    : "";
+
+  const lista = visibili(true).filter(d => inTipo(d, tipo));
+  if (!lista.length) {
+    $("#giorni").innerHTML = `<p class="stato"><strong>Nessun documento di udienza ${tipo === "penale" ? "penale" : "civile"}</strong>
+      ${$("#passati").checked ? "Non ci sono documenti per questa ricerca." : "Non ci sono documenti da oggi in poi. Spunta «Mostra anche i giorni passati» per vedere gli ultimi."}</p>`;
+    return;
+  }
+  const perGiorno = {};
+  lista.forEach(d => (perGiorno[d.data] = perGiorno[d.data] || []).push(d));
+  $("#giorni").innerHTML = Object.keys(perGiorno).sort().map(iso => {
+    const righe = perGiorno[iso].sort((a, b) => a.ufficio.localeCompare(b.ufficio) || a.magistrato.localeCompare(b.magistrato) || a.titolo.localeCompare(b.titolo));
+    const etichetta = iso === g ? "Oggi" : iso === piuGiorni(g, 1) ? "Domani" : iso < g ? "Passata" : "";
+    return `<section class="giorno ${iso < g ? "passato" : ""}">
+      <h2 class="giorno-titolo"><span>${esc(giornoLungo(iso))}</span>${etichetta ? `<span class="etichetta-giorno ${iso === g ? "oggi" : ""}">${etichetta}</span>` : ""}
+        <span class="conta">${righe.length} ${righe.length === 1 ? "documento" : "documenti"}</span></h2>
+      <ul class="udienze-lista">${righe.map(rigaHtml).join("")}</ul></section>`;
+  }).join("");
+}
+
+async function carica() {
+  try {
+    const r = await fetch("data/udienze.json", {cache: "no-cache"});
+    if (!r.ok) throw new Error(r.status);
+    const d = await r.json();
+    tutte = d.udienze || [];
+    const quando = d.aggiornato_il ? new Date(d.aggiornato_il).toLocaleString("it-IT", {day: "numeric", month: "short", hour: "2-digit", minute: "2-digit"}) : "—";
+    $("#stato-testo").innerHTML = d.pagine_lette
+      ? `Aggiornato il ${esc(quando)} · lette ${d.pagine_lette} pagine di magistrati e collegi · controllo automatico ogni ora`
+      : "In attesa del primo aggiornamento dal sito dell'Ordine";
+  } catch (e) {
+    $("#stato-testo").innerHTML = '<span class="errore">Elenco udienze non disponibile</span>';
+  }
+  mostra();
+}
+
+carica();
+setInterval(carica, 10 * 60 * 1000);
+document.querySelectorAll(".segmento").forEach(b => b.addEventListener("click", () => {
+  tipo = b.dataset.tipo;
+  document.querySelectorAll(".segmento").forEach(x => { x.classList.toggle("attivo", x === b); x.setAttribute("aria-selected", x === b); });
+  mostra();
+}));
+$("#uffici").addEventListener("click", e => { const b = e.target.closest("[data-uff]"); if (b) { ufficio = b.dataset.uff; mostra(); } });
+$("#cerca").addEventListener("input", mostra);
+$("#passati").addEventListener("change", mostra);
+</script>
+<script src="app.js" defer></script>
+</body>
+</html>

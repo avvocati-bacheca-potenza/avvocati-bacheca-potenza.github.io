@@ -22,7 +22,7 @@ jobs:
   aggiorna:
     runs-on: ubuntu-latest
     outputs:
-      modificato: ${{ steps.notizie.outputs.modificato }}
+      modificato: ${{ steps.notizie.outputs.modificato == 'true' || steps.udienze.outputs.modificato == 'true' }}
     steps:
       - uses: actions/checkout@v4
 
@@ -30,17 +30,21 @@ jobs:
         id: notizie
         run: python3 scripts/aggiorna_notizie.py >> "$GITHUB_OUTPUT"
 
-      - name: Salva le notizie nuove
-        if: steps.notizie.outputs.modificato == 'true'
+      - name: Controlla le udienze pubblicate dall'Ordine
+        id: udienze
+        run: python3 scripts/aggiorna_udienze.py >> "$GITHUB_OUTPUT"
+
+      - name: Salva le novità
+        if: steps.notizie.outputs.modificato == 'true' || steps.udienze.outputs.modificato == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add site/data/notizie.json
-          git commit -m "Notizie dall'Ordine aggiornate"
+          git add site/data/notizie.json site/data/udienze.json
+          git commit -m "Notizie e udienze dall'Ordine aggiornate"
           git push
 
       - name: Prepara il sito
-        if: github.event_name != 'schedule' || steps.notizie.outputs.modificato == 'true'
+        if: github.event_name != 'schedule' || steps.notizie.outputs.modificato == 'true' || steps.udienze.outputs.modificato == 'true'
         uses: actions/upload-pages-artifact@v3
         with:
           path: site

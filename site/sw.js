@@ -1,8 +1,8 @@
 // Service worker: permette l'installazione come app e l'apertura anche senza connessione.
 // Sempre prima la rete (così annunci e notizie sono aggiornati), la copia salvata solo se offline.
-const CACHE = "oap-v3";
-const BASE = ["./", "index.html", "bacheca.html", "albo.html", "mediazione.html", "style.css", "app.js", "manifest.webmanifest",
-              "img/logo.png", "img/icona-192.png", "data/annunci.json", "data/notizie.json"];
+const CACHE = "oap-v4";
+const BASE = ["./", "index.html", "bacheca.html", "albo.html", "mediazione.html", "udienze.html", "style.css", "app.js", "manifest.webmanifest",
+              "img/logo.png", "img/icona-192.png", "data/annunci.json", "data/notizie.json", "data/udienze.json"];
 
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(BASE)).then(() => self.skipWaiting()));

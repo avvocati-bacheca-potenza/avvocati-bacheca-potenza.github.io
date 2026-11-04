@@ -376,12 +376,50 @@ main:has(.home-sezione) { padding-bottom: 56px; }
   .tabella-costi thead th { font-size: 11.5px; font-weight: 600; letter-spacing: 0; text-transform: none; }
   .tabella-costi thead th.gruppo { text-transform: uppercase; font-size: 10.5px; letter-spacing: .5px; }
   .nav { gap: 0; }
+  .nav a[href="./"] { display: none; }  /* su telefono basta il logo per tornare alla home */
   .nav a { padding: 8px 7px; font-size: 13.5px; }
   .nav-esteso { display: none; }
   .nav-condividi { font-size: 0; gap: 0; padding: 9px 11px; }
   .recapiti-riga li { padding: 14px; }
   .recapiti-riga.fitta li { grid-template-columns: 16px 98px 1fr; padding: 12px 16px; }
   .recapiti-riga a, .recapiti-riga .valore { font-size: 14px; }
+}
+
+/* Udienze: schede penale/civile, giorni e documenti per magistrato */
+.udienze-comandi { display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap; padding: 14px 18px; }
+.udienze-comandi input { max-width: 280px; }
+.segmenti { display: inline-flex; padding: 3px; background: #eef1f7; border-radius: 10px; }
+.segmento { display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px; font: 600 14px var(--sans); color: var(--tenue);
+            background: none; border: 0; border-radius: 8px; cursor: pointer; }
+.segmento.attivo { background: #fff; color: var(--navy); box-shadow: 0 1px 3px rgba(15,35,71,.18); }
+.segmento .conta, .giorno-titolo .conta { min-width: 22px; padding: 1px 7px; font-size: 12px; font-weight: 700; text-align: center;
+                                          color: var(--blu); background: var(--blu-chiaro); border-radius: 999px; }
+.segmento.attivo .conta { color: #fff; background: var(--rosso); }
+#uffici { border-bottom: 0; padding-top: 0; }
+#uffici:empty { display: none; }
+.passati { display: flex; align-items: center; gap: 8px; padding: 0 18px 12px; font-size: 13px; color: var(--tenue); cursor: pointer; }
+.passati input { width: auto; }
+.giorno { border-top: 1px solid var(--bordo); }
+.giorno-titolo { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 0; padding: 12px 18px; background: #f8f9fc;
+                 font: 600 16px var(--serif); color: var(--navy); }
+.giorno-titolo .conta { margin-left: auto; font-family: var(--sans); font-weight: 600; }
+.etichetta-giorno { padding: 2px 9px; font: 700 11px var(--sans); letter-spacing: .5px; text-transform: uppercase; color: var(--navy); background: #e1e7f3; border-radius: 4px; }
+.etichetta-giorno.oggi { color: #fff; background: var(--rosso); }
+.giorno.passato .giorno-titolo { color: var(--tenue); }
+.giorno.passato .udienze-lista { opacity: .75; }
+.udienze-lista { list-style: none; margin: 0; padding: 0; }
+.udienza { display: grid; grid-template-columns: minmax(180px, 250px) 1fr auto; gap: 6px 18px; align-items: center; padding: 11px 18px; border-top: 1px solid var(--bordo); }
+.udienza:first-child { border-top: 0; }
+.udienza .chi { display: flex; flex-direction: column; min-width: 0; }
+.udienza .chi strong { color: var(--navy); font-size: 14.5px; }
+.udienza .uff { font-size: 12.5px; color: var(--tenue); }
+.pill-lavoro { padding: 1px 6px; font-size: 10.5px; font-weight: 700; text-transform: uppercase; color: var(--blu); background: var(--blu-chiaro); border-radius: 4px; }
+.udienza .doc { font-size: 14px; text-decoration: none; overflow-wrap: anywhere; }
+.udienza .doc:hover { text-decoration: underline; }
+@media (max-width: 760px) {
+  .udienze-comandi input { max-width: none; width: 100%; }
+  .udienza { grid-template-columns: 1fr auto; }
+  .udienza .doc { grid-column: 1 / -1; }
 }
 
 /* Albo ufficiale incorporato */
