@@ -423,6 +423,17 @@
    "rilevato_il": "2026-11-04T16:05:01Z"
   },
   {
+   "data": "2026-11-10",
+   "categoria": "penale",
+   "ufficio": "Tribunale",
+   "magistrato": "Dott.ssa Bonamico",
+   "titolo": "DECRETO DR.SSA BONAMICO 10.11.26",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/DECRETO%20DR.SSA%20BONAMICO%2010.11.26.pdf",
+   "dimensione": "101.83 KB",
+   "pagina": "/trattazione-udienze/tribunale/sezione-penale/dottssa-bonamico",
+   "rilevato_il": "2026-11-05T08:21:41Z"
+  },
+  {
    "data": "2026-11-11",
    "categoria": "penale",
    "ufficio": "Giudice di pace di Potenza",
@@ -478,5 +489,5 @@
    "rilevato_il": "2026-11-04T16:05:01Z"
   }
  ],
- "aggiornato_il": "2026-11-04T16:55:47Z"
+ "aggiornato_il": "2026-11-05T08:21:41Z"
 }
