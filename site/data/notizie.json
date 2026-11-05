@@ -1,7 +1,22 @@
 {
-  "dal": "2026-09-05",
+  "dal": "2026-09-06",
   "fonte": "https://www.ordineavvocatipotenza.it",
   "notizie": [
+    {
+      "link": "https://www.ordineavvocatipotenza.it/ministero-delleconomia-e-delle-finanze-pagamento-del-cut",
+      "titolo": "MINISTERO DELL'ECONOMIA E DELLE FINANZE - PAGAMENTO DEL CUT",
+      "data": "2026-11-05",
+      "testo": null,
+      "allegati": [
+        {
+          "nome": "20261105095619009.pdf",
+          "url": "https://www.ordineavvocatipotenza.it/sites/default/files/20261105095619009.pdf",
+          "dimensione": "1.59 MB"
+        }
+      ],
+      "rilevato_il": "2026-11-05T09:29:33Z",
+      "tipo": "generale"
+    },
     {
       "link": "https://www.ordineavvocatipotenza.it/scuola-di-specializzazione-diritto-sindacale-del-lavoro-e-della-previdenza",
       "titolo": "SCUOLA DI SPECIALIZZAZIONE IN DIRITTO SINDACALE DEL LAVORO E DELLA PREVIDENZA",
