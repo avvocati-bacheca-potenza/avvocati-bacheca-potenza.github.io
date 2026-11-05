@@ -478,6 +478,17 @@
    "rilevato_il": "2026-11-04T16:05:01Z"
   },
   {
+   "data": "2026-11-11",
+   "categoria": "penale",
+   "ufficio": "Tribunale",
+   "magistrato": "Dott. Cirillo",
+   "titolo": "DECRETO DR. CIRILLO 11.11.2026",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/DECRETO%20DR.%20CIRILLO%2011.11.2026.pdf",
+   "dimensione": "82.35 KB",
+   "pagina": "/trattazione-udienze/tribunale/sezione-penale/dott-cirillo",
+   "rilevato_il": "2026-11-05T15:24:21Z"
+  },
+  {
    "data": "2026-11-17",
    "categoria": "civile",
    "ufficio": "Corte d'Appello",
@@ -522,5 +533,5 @@
    "rilevato_il": "2026-11-04T16:05:01Z"
   }
  ],
- "aggiornato_il": "2026-11-05T14:12:51Z"
+ "aggiornato_il": "2026-11-05T15:24:21Z"
 }
