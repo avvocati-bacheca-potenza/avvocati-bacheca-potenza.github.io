@@ -368,6 +368,39 @@
    "rilevato_il": "2026-11-04T16:05:01Z"
   },
   {
+   "data": "2026-11-09",
+   "categoria": "penale",
+   "ufficio": "Tribunale",
+   "magistrato": "Dott.ssa Cristofaro",
+   "titolo": "D.F.U. 9.11.26 dr.ssa CRISTOFARO DA PUBBLICARE",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/D.F.U.%209.11.26%20dr.ssa%20CRISTOFARO%20DA%20PUBBLICARE.docx",
+   "dimensione": "55.03 KB",
+   "pagina": "/trattazione-udienze/tribunale/sezione-penale/dottssa-cristofaro",
+   "rilevato_il": "2026-11-05T14:12:51Z"
+  },
+  {
+   "data": "2026-11-09",
+   "categoria": "penale",
+   "ufficio": "Tribunale",
+   "magistrato": "Dott.ssa Rossi",
+   "titolo": "D.F.U. 9.11.26 RUOLO EX ROSSI-STANTE dr.ssa CRISTOFARO DA PUBBLICARE",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/D.F.U.%209.11.26%20RUOLO%20EX%20ROSSI-STANTE%20dr.ssa%20CRISTOFARO%20DA%20PUBBLICARE.docx",
+   "dimensione": "56.54 KB",
+   "pagina": "/trattazione-udienze/tribunale/sezione-penale/dottssa-rossi",
+   "rilevato_il": "2026-11-05T14:12:51Z"
+  },
+  {
+   "data": "2026-11-09",
+   "categoria": "penale",
+   "ufficio": "Tribunale",
+   "magistrato": "Dott.ssa Stante",
+   "titolo": "D.F.U. 9.11.26 RUOLO EX ROSSI-STANTE dr.ssa CRISTOFARO DA PUBBLICARE",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/D.F.U.%209.11.26%20RUOLO%20EX%20ROSSI-STANTE%20dr.ssa%20CRISTOFARO%20DA%20PUBBLICARE_0.docx",
+   "dimensione": "56.54 KB",
+   "pagina": "/trattazione-udienze/tribunale/sezione-penale/dottssa-stante",
+   "rilevato_il": "2026-11-05T14:12:51Z"
+  },
+  {
    "data": "2026-11-10",
    "categoria": "civile",
    "ufficio": "Corte d'Appello",
@@ -489,5 +522,5 @@
    "rilevato_il": "2026-11-04T16:05:01Z"
   }
  ],
- "aggiornato_il": "2026-11-05T08:21:41Z"
+ "aggiornato_il": "2026-11-05T14:12:51Z"
 }
