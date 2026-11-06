@@ -467,6 +467,17 @@
    "rilevato_il": "2026-11-05T08:21:41Z"
   },
   {
+   "data": "2026-11-10",
+   "categoria": "penale",
+   "ufficio": "Tribunale",
+   "magistrato": "Dott.ssa Loffredo",
+   "titolo": "decreto udienza 10.11.26 dott.ssa Loffredo",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/decreto%20udienza%2010.11.26%20dott.ssa%20Loffredo.pdf",
+   "dimensione": "138.04 KB",
+   "pagina": "/trattazione-udienze/tribunale/sezione-penale/dottssa-loffredo",
+   "rilevato_il": "2026-11-06T11:25:35Z"
+  },
+  {
    "data": "2026-11-11",
    "categoria": "penale",
    "ufficio": "Giudice di pace di Potenza",
@@ -555,5 +566,5 @@
    "rilevato_il": "2026-11-04T16:05:01Z"
   }
  ],
- "aggiornato_il": "2026-11-06T10:28:34Z"
+ "aggiornato_il": "2026-11-06T11:25:35Z"
 }
