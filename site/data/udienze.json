@@ -522,6 +522,17 @@
    "rilevato_il": "2026-11-06T09:24:13Z"
   },
   {
+   "data": "2026-11-13",
+   "categoria": "penale",
+   "ufficio": "Tribunale",
+   "magistrato": "Collegio B",
+   "titolo": "COLLEGIO B - ORDINE DI CHIAMATA UDIENZA DEL 13.11.2026",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/COLLEGIO%20B%20-%20ORDINE%20DI%20CHIAMATA%20UDIENZA%20DEL%2013.11.2026.pdf",
+   "dimensione": "257.33 KB",
+   "pagina": "/trattazione-udienze/tribunale/sezione-penale/collegio-b",
+   "rilevato_il": "2026-11-06T23:29:47Z"
+  },
+  {
    "data": "2026-11-17",
    "categoria": "civile",
    "ufficio": "Corte d'Appello",
@@ -566,5 +577,5 @@
    "rilevato_il": "2026-11-04T16:05:01Z"
   }
  ],
- "aggiornato_il": "2026-11-06T11:25:35Z"
+ "aggiornato_il": "2026-11-06T23:29:47Z"
 }
