@@ -181,8 +181,11 @@ async function carica() {
     .filter(x => x.tipo !== "udienze" && piuGiorni(x.data, GIORNI_NOTIZIE_ORDINE - 1) >= g)
     .map(x => ({...x, fonte: "ordine"}));
   notizieDal = n.dal;
-  voci = [...locali, ...ordine].sort((x, y) =>
-    (y.in_evidenza ? 1 : 0) - (x.in_evidenza ? 1 : 0) || y.data.localeCompare(x.data));
+  // Ordine: prima gli eventi (annunci con una data), dal più vicino al più lontano; poi gli annunci in evidenza
+  // senza data; poi il resto (notizie dell'Ordine comprese) dal più recente.
+  const gruppo = v => v.fonte === "locale" && v.scade_il ? 0 : v.in_evidenza ? 1 : 2;
+  voci = [...locali, ...ordine].sort((x, y) => gruppo(x) - gruppo(y) ||
+    (gruppo(x) === 0 ? x.scade_il.localeCompare(y.scade_il) : y.data.localeCompare(x.data)));
   // La sezione «Varie» resta sempre visibile, anche quando non ha annunci; le altre compaiono solo se ne hanno.
   const usate = new Set([...locali.map(x => x.categoria), "Varie"]);
   document.querySelectorAll(".chip[data-cat]").forEach(c => c.remove());
