@@ -1,7 +1,22 @@
 {
-  "dal": "2026-09-06",
+  "dal": "2026-09-10",
   "fonte": "https://www.ordineavvocatipotenza.it",
   "notizie": [
+    {
+      "link": "https://www.ordineavvocatipotenza.it/linee-guida-come-depositare-istanze-di-liquidazione-sul-nuovo-portare-spedigiu",
+      "titolo": "LINEE GUIDA - COME DEPOSITARE ISTANZE DI LIQUIDAZIONE SUL NUOVO PORTARE SPEDIGIU",
+      "data": "2026-11-09",
+      "testo": null,
+      "allegati": [
+        {
+          "nome": "linee guida LGPD_01_SPEdiGIUS_istanza_di_liquidazione.pdf",
+          "url": "https://www.ordineavvocatipotenza.it/sites/default/files/linee%20guida%20LGPD_01_SPEdiGIUS_istanza_di_liquidazione.pdf",
+          "dimensione": "215.01 KB"
+        }
+      ],
+      "rilevato_il": "2026-11-09T09:53:26Z",
+      "tipo": "generale"
+    },
     {
       "link": "https://www.ordineavvocatipotenza.it/ministero-delleconomia-e-delle-finanze-pagamento-del-cut",
       "titolo": "MINISTERO DELL'ECONOMIA E DELLE FINANZE - PAGAMENTO DEL CUT",
