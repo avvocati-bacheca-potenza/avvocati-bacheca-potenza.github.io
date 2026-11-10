@@ -138,17 +138,53 @@ def allegati(pagina_html):
     return trovati
 
 
+FILE_LOCALI = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "site", "data", "udienze_locali.json")
+CARTELLA_LOCALI = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "site", "udienze-locali")
+
+
+def pota_locali():
+    """Toglie i documenti della cartella «Udienze» fuori dalla finestra (stessa regola delle udienze) e cancella i loro file."""
+    if not os.path.exists(FILE_LOCALI):
+        return False
+    oggi = datetime.date.today()
+    da = (oggi - datetime.timedelta(days=oggi.weekday() + 7)).isoformat()
+
+    def valido(d):
+        if d.get("data"):
+            return d["data"] >= da
+        anno, mese = int(d["mese"][:4]), int(d["mese"][5:])
+        fine = datetime.date(anno + (mese == 12), mese % 12 + 1, 1) - datetime.timedelta(days=1)
+        return fine.isoformat() >= da
+
+    with open(FILE_LOCALI, encoding="utf-8") as f:
+        registro = json.load(f)
+    restano = [d for d in registro["documenti"] if valido(d)]
+    if len(restano) == len(registro["documenti"]):
+        return False
+    usati = {os.path.basename(d["url"]) for d in restano}
+    if os.path.isdir(CARTELLA_LOCALI):
+        for nome in os.listdir(CARTELLA_LOCALI):
+            if nome not in usati:
+                os.remove(os.path.join(CARTELLA_LOCALI, nome))
+    registro["documenti"] = restano
+    with open(FILE_LOCALI, "w", encoding="utf-8") as f:
+        json.dump(registro, f, ensure_ascii=False, indent=1)
+        f.write("\n")
+    return True
+
+
 def main():
+    potato = pota_locali()
     with open(FILE, encoding="utf-8") as f:
         precedente = json.load(f)
     noti = {(d["url"], d["magistrato"]): d for d in precedente.get("udienze", [])}
 
     percorsi = con_tentativi(pagine_udienze, "sitemap")
     if not percorsi:
-        print("modificato=false")
+        print("modificato=%s" % str(potato).lower())
         return
     if os.environ.get("GITHUB_EVENT_NAME") == "schedule" and datetime.datetime.utcnow().minute >= 30:
-        print("modificato=false")  # i controlli programmati sulle udienze partono una volta all'ora
+        print("modificato=%s" % str(potato).lower())  # i controlli programmati sulle udienze partono una volta all'ora
         return
 
     oggi = datetime.date.today()
@@ -189,7 +225,7 @@ def main():
                 }
 
     if pagine_ok == 0:
-        print("modificato=false")
+        print("modificato=%s" % str(potato).lower())
         return
     elenco = sorted(raccolti.values(), key=lambda d: (d["data"], d["categoria"], d["ufficio"], d["magistrato"], d["titolo"]))
     nuovo = {"da": da.isoformat(), "pagine_lette": pagine_ok, "pagine_totali": len(percorsi),
@@ -202,7 +238,7 @@ def main():
             json.dump(nuovo, f, ensure_ascii=False, indent=1)
             f.write("\n")
         print("Udienze: %d documenti da %d pagine" % (len(elenco), pagine_ok), file=sys.stderr)
-    print("modificato=%s" % str(modificato).lower())
+    print("modificato=%s" % str(modificato or potato).lower())
 
 
 if __name__ == "__main__":
