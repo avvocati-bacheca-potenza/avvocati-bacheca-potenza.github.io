@@ -1,5 +1,5 @@
 {
-  "dal": "2026-09-10",
+  "dal": "2026-09-11",
   "fonte": "https://www.ordineavvocatipotenza.it",
   "notizie": [
     {
@@ -242,22 +242,6 @@
         }
       ],
       "rilevato_il": "2026-09-15T12:00:00Z",
-      "dettagli_letti": true,
-      "tipo": "generale"
-    },
-    {
-      "link": "https://www.ordineavvocatipotenza.it/avviso-pubblico-liscrizione-nellelenco-aziendale-degli-avvocati-esterni-laffidamento-di-incarichi-0",
-      "titolo": "AVVISO PUBBLICO PER L'ISCRIZIONE NELL'ELENCO AZIENDALE DEGLI AVVOCATI ESTERNI PER L'AFFIDAMENTO DI INCARICHI DI RAPPRESENTANZA E PATROCINIO LEGALE ADOTTATO CON DDG ASP N. 784 DEL 07/08/2026.",
-      "data": "2026-09-10",
-      "testo": "class=\"field-items\">",
-      "allegati": [
-        {
-          "nome": "20260910155552339.pdf",
-          "url": "https://www.ordineavvocatipotenza.it/sites/default/files/20260910155552339_0.pdf",
-          "dimensione": "525.92 KB"
-        }
-      ],
-      "rilevato_il": "2026-09-10T12:00:00Z",
       "dettagli_letti": true,
       "tipo": "generale"
     }
