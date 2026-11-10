@@ -415,6 +415,17 @@
    "data": "2026-11-12",
    "categoria": "penale",
    "ufficio": "Tribunale – GIP/GUP",
+   "magistrato": "Dott. Amodeo",
+   "titolo": "Statino 12.11.2026 - DOTT. Amodeo",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/Statino%2012.11.2026%20-%20DOTT.%20Amodeo.pdf",
+   "dimensione": "146.85 KB",
+   "pagina": "/trattazione-udienze/tribunale/sezione-penale/ufficio-gip-gup/dott-amodeo",
+   "rilevato_il": "2026-11-10T16:50:17Z"
+  },
+  {
+   "data": "2026-11-12",
+   "categoria": "penale",
+   "ufficio": "Tribunale – GIP/GUP",
    "magistrato": "Dott. Setola",
    "titolo": "Statino 12.11.2026 -DOTT. SETOLA",
    "url": "https://www.ordineavvocatipotenza.it/sites/default/files/Statino%2012.11.2026%20-DOTT.%20SETOLA.pdf",
@@ -432,6 +443,17 @@
    "dimensione": "257.33 KB",
    "pagina": "/trattazione-udienze/tribunale/sezione-penale/collegio-b",
    "rilevato_il": "2026-11-06T23:29:47Z"
+  },
+  {
+   "data": "2026-11-16",
+   "categoria": "penale",
+   "ufficio": "Tribunale",
+   "magistrato": "Collegio A",
+   "titolo": "Collegio A - Ordine di chiamata - Udienza del 16.11.2026",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/Collegio%20A%20-%20Ordine%20di%20chiamata%20-%20Udienza%20del%2016.11.2026.pdf",
+   "dimensione": "166.48 KB",
+   "pagina": "/trattazione-udienze/tribunale/sezione-penale/collegio",
+   "rilevato_il": "2026-11-10T16:50:17Z"
   },
   {
    "data": "2026-11-17",
@@ -522,5 +544,5 @@
    "rilevato_il": "2026-11-09T14:14:45Z"
   }
  ],
- "aggiornato_il": "2026-11-10T09:19:05Z"
+ "aggiornato_il": "2026-11-10T16:50:17Z"
 }
