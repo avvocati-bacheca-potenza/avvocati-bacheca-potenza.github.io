@@ -467,6 +467,17 @@
    "rilevato_il": "2026-11-10T16:50:17Z"
   },
   {
+   "data": "2026-11-16",
+   "categoria": "penale",
+   "ufficio": "Tribunale",
+   "magistrato": "Dott.ssa Mirone",
+   "titolo": "ORDINE DI TRATTAZIONE - Udienza del 16.11.2026 dott.ssa Mirone",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/ORDINE%20DI%20TRATTAZIONE%20-%20Udienza%20del%2016.11.2026%20dott.ssa%20Mirone.docx",
+   "dimensione": "32.52 KB",
+   "pagina": "/trattazione-udienze/tribunale/sezione-penale/dottssa-mirone",
+   "rilevato_il": "2026-11-11T10:27:23Z"
+  },
+  {
    "data": "2026-11-17",
    "categoria": "civile",
    "ufficio": "Corte d'Appello",
@@ -555,5 +566,5 @@
    "rilevato_il": "2026-11-09T14:14:45Z"
   }
  ],
- "aggiornato_il": "2026-11-11T09:24:07Z"
+ "aggiornato_il": "2026-11-11T10:27:23Z"
 }
