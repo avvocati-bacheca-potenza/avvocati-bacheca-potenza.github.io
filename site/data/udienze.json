@@ -414,6 +414,17 @@
   {
    "data": "2026-11-12",
    "categoria": "penale",
+   "ufficio": "Tribunale",
+   "magistrato": "Dott.ssa Caprio",
+   "titolo": "ud. 12.11.2026 dott.ssa Rosalia Caprio",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/ud.%2012.11.2026%20dott.ssa%20Rosalia%20Caprio.docx",
+   "dimensione": "22.07 KB",
+   "pagina": "/trattazione-udienze/tribunale/sezione-penale/dottssa-caprio",
+   "rilevato_il": "2026-11-11T09:24:07Z"
+  },
+  {
+   "data": "2026-11-12",
+   "categoria": "penale",
    "ufficio": "Tribunale – GIP/GUP",
    "magistrato": "Dott. Amodeo",
    "titolo": "Statino 12.11.2026 - DOTT. Amodeo",
@@ -544,5 +555,5 @@
    "rilevato_il": "2026-11-09T14:14:45Z"
   }
  ],
- "aggiornato_il": "2026-11-10T16:50:17Z"
+ "aggiornato_il": "2026-11-11T09:24:07Z"
 }
