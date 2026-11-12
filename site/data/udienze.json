@@ -470,6 +470,17 @@
    "data": "2026-11-16",
    "categoria": "penale",
    "ufficio": "Tribunale",
+   "magistrato": "Dott.ssa Cristofaro",
+   "titolo": "Decreto Cristofaro 16 novembre 2026",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/Decreto%20Cristofaro%2016%20novembre%202026.pdf",
+   "dimensione": "93.21 KB",
+   "pagina": "/trattazione-udienze/tribunale/sezione-penale/dottssa-cristofaro",
+   "rilevato_il": "2026-11-12T14:11:43Z"
+  },
+  {
+   "data": "2026-11-16",
+   "categoria": "penale",
+   "ufficio": "Tribunale",
    "magistrato": "Dott.ssa Mirone",
    "titolo": "ORDINE DI TRATTAZIONE - Udienza del 16.11.2026 dott.ssa Mirone",
    "url": "https://www.ordineavvocatipotenza.it/sites/default/files/ORDINE%20DI%20TRATTAZIONE%20-%20Udienza%20del%2016.11.2026%20dott.ssa%20Mirone.docx",
@@ -533,6 +544,17 @@
    "rilevato_il": "2026-11-11T17:16:10Z"
   },
   {
+   "data": "2026-11-17",
+   "categoria": "penale",
+   "ufficio": "Tribunale",
+   "magistrato": "Dott.ssa Loffredo",
+   "titolo": "decreto udienza 17.11.2026 dott.ssa Loffredo",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/decreto%20udienza%2017.11.2026%20dott.ssa%20Loffredo.pdf",
+   "dimensione": "138.36 KB",
+   "pagina": "/trattazione-udienze/tribunale/sezione-penale/dottssa-loffredo",
+   "rilevato_il": "2026-11-12T14:11:43Z"
+  },
+  {
    "data": "2026-11-18",
    "categoria": "penale",
    "ufficio": "Giudice di pace di Potenza",
@@ -542,6 +564,17 @@
    "dimensione": "56.95 KB",
    "pagina": "/trattazione-udienze/giudice-di-pace/giudice-di-pace-di-potenza/sezione-penale/dottssa-brunetti",
    "rilevato_il": "2026-11-09T14:14:45Z"
+  },
+  {
+   "data": "2026-11-18",
+   "categoria": "penale",
+   "ufficio": "Tribunale",
+   "magistrato": "Collegio A",
+   "titolo": "Collegio A - Ordine di chiamata - Udienza del 18.11.2026",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/Collegio%20A%20-%20Ordine%20di%20chiamata%20-%20Udienza%20del%2018.11.2026.pdf",
+   "dimensione": "178.69 KB",
+   "pagina": "/trattazione-udienze/tribunale/sezione-penale/collegio",
+   "rilevato_il": "2026-11-12T14:11:43Z"
   },
   {
    "data": "2026-11-24",
@@ -599,5 +632,5 @@
    "rilevato_il": "2026-11-12T09:28:28Z"
   }
  ],
- "aggiornato_il": "2026-11-12T09:28:28Z"
+ "aggiornato_il": "2026-11-12T14:11:43Z"
 }
