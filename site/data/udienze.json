@@ -569,6 +569,17 @@
    "data": "2026-12-01",
    "categoria": "civile",
    "ufficio": "Corte d'Appello",
+   "magistrato": "Collegio Primo (Coll. A)",
+   "titolo": "DECRETO 01.12.26 coll. A",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/DECRETO%2001.12.26%20coll.%20A.pdf",
+   "dimensione": "776.02 KB",
+   "pagina": "/trattazione-udienze/corte-dappello/sezione-civile/collegio-primo-coll",
+   "rilevato_il": "2026-11-12T08:20:33Z"
+  },
+  {
+   "data": "2026-12-01",
+   "categoria": "civile",
+   "ufficio": "Corte d'Appello",
    "magistrato": "Secondo Collegio (Coll. B)",
    "titolo": "DECRETO 01-12-2026 COLL. B_",
    "url": "https://www.ordineavvocatipotenza.it/sites/default/files/DECRETO%2001-12-2026%20COLL.%20B_.pdf",
@@ -577,5 +588,5 @@
    "rilevato_il": "2026-11-09T14:14:45Z"
   }
  ],
- "aggiornato_il": "2026-11-11T17:16:10Z"
+ "aggiornato_il": "2026-11-12T08:20:33Z"
 }
