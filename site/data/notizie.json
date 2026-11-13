@@ -1,7 +1,22 @@
 {
-  "dal": "2026-09-11",
+  "dal": "2026-09-14",
   "fonte": "https://www.ordineavvocatipotenza.it",
   "notizie": [
+    {
+      "link": "https://www.ordineavvocatipotenza.it/costituzione-elenchi-di-avvocati-cui-affidare-incarichi-di-sostituti-di-udienza-contenzioso",
+      "titolo": "COSTITUZIONE ELENCHI DI AVVOCATI A CUI AFFIDARE INCARICHI DI SOSTITUTI DI UDIENZA CONTENZIOSO DIREZIONE REGIONALE BASILICATA INAIL",
+      "data": "2026-11-13",
+      "testo": null,
+      "allegati": [
+        {
+          "nome": "comunicazione consigli ordine avvocati potenza lagonegro matera_firmato.pdf",
+          "url": "https://www.ordineavvocatipotenza.it/sites/default/files/comunicazione%20consigli%20ordine%20avvocati%20potenza%20lagonegro%20matera_firmato.pdf",
+          "dimensione": "166.25 KB"
+        }
+      ],
+      "rilevato_il": "2026-11-13T16:58:28Z",
+      "tipo": "udienze"
+    },
     {
       "link": "https://www.ordineavvocatipotenza.it/linee-guida-come-depositare-istanze-di-liquidazione-sul-nuovo-portare-spedigiu",
       "titolo": "LINEE GUIDA - COME DEPOSITARE ISTANZE DI LIQUIDAZIONE SUL NUOVO PORTARE SPEDIGIU",
