@@ -1,5 +1,5 @@
 {
-  "dal": "2026-09-14",
+  "dal": "2026-09-16",
   "fonte": "https://www.ordineavvocatipotenza.it",
   "notizie": [
     {
@@ -225,38 +225,6 @@
         }
       ],
       "rilevato_il": "2026-09-17T12:00:00Z",
-      "dettagli_letti": true,
-      "tipo": "generale"
-    },
-    {
-      "link": "https://www.ordineavvocatipotenza.it/v-corso-di-formazione-tecnica-e-deontologica-dellavvocato-penalista",
-      "titolo": "V CORSO DI FORMAZIONE TECNICA E DEONTOLOGICA DELL'AVVOCATO PENALISTA",
-      "data": "2026-09-15",
-      "testo": "class=\"field-items\">",
-      "allegati": [
-        {
-          "nome": "20260915104846065.pdf",
-          "url": "https://www.ordineavvocatipotenza.it/sites/default/files/20260915104846065.pdf",
-          "dimensione": "168.39 KB"
-        }
-      ],
-      "rilevato_il": "2026-09-15T12:00:00Z",
-      "dettagli_letti": true,
-      "tipo": "generale"
-    },
-    {
-      "link": "https://www.ordineavvocatipotenza.it/premio-%E2%80%9Cno-amore-%E2%80%94-le-invisibili%E2%80%9D-concorso-di-cortometraggi-contro-la-violenza-di-genere-occasione",
-      "titolo": "PREMIO “NO aMORE — LE INVISIBILI” CONCORSO DI CORTOMETRAGGI CONTRO LA VIOLENZA DI GENERE IN OCCASIONE DELLA GIORNATA DEL 25 NOVEMBRE III EDIZIONE - 2026",
-      "data": "2026-09-15",
-      "testo": "class=\"field-items\">",
-      "allegati": [
-        {
-          "nome": "20260915095610005.pdf",
-          "url": "https://www.ordineavvocatipotenza.it/sites/default/files/20260915095610005.pdf",
-          "dimensione": "119.69 KB"
-        }
-      ],
-      "rilevato_il": "2026-09-15T12:00:00Z",
       "dettagli_letti": true,
       "tipo": "generale"
     }
