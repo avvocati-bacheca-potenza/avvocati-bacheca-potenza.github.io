@@ -346,6 +346,17 @@
    "rilevato_il": "2026-11-12T14:11:43Z"
   },
   {
+   "data": "2026-11-17",
+   "categoria": "penale",
+   "ufficio": "Tribunale – GIP/GUP",
+   "magistrato": "Dott.ssa Petrocelli",
+   "titolo": "statino 17.11.26 dott.ssa Petrocelli",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/statino%2017.11.26%20dott.ssa%20Petrocelli.pdf",
+   "dimensione": "172.14 KB",
+   "pagina": "/trattazione-udienze/tribunale/sezione-penale/ufficio-gip-gup/dottssa-petrocelli",
+   "rilevato_il": "2026-11-16T17:18:22Z"
+  },
+  {
    "data": "2026-11-18",
    "categoria": "penale",
    "ufficio": "Giudice di pace di Potenza",
@@ -366,6 +377,17 @@
    "dimensione": "178.69 KB",
    "pagina": "/trattazione-udienze/tribunale/sezione-penale/collegio",
    "rilevato_il": "2026-11-12T14:11:43Z"
+  },
+  {
+   "data": "2026-11-18",
+   "categoria": "penale",
+   "ufficio": "Tribunale",
+   "magistrato": "Dott.ssa Battista",
+   "titolo": "DECRETO UDIENZA DEL 18.11.26 DR.SSA BATTISTA",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/DECRETO%20UDIENZA%20DEL%2018.11.26%20DR.SSA%20BATTISTA.docx",
+   "dimensione": "56.56 KB",
+   "pagina": "/trattazione-udienze/tribunale/sezione-penale/dottssa-battista",
+   "rilevato_il": "2026-11-16T17:18:22Z"
   },
   {
    "data": "2026-11-19",
@@ -401,6 +423,28 @@
    "rilevato_il": "2026-11-04T16:05:01Z"
   },
   {
+   "data": "2026-11-24",
+   "categoria": "penale",
+   "ufficio": "Giudice di pace di Potenza",
+   "magistrato": "Dott.ssa Bonifacio",
+   "titolo": "UD. 24.11.26 DOTT.SSA BONIFACIO",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/UD.%2024.11.26%20DOTT.SSA%20BONIFACIO.pdf",
+   "dimensione": "65.14 KB",
+   "pagina": "/trattazione-udienze/giudice-di-pace/giudice-di-pace-di-potenza/sezione-penale/dottssa-bonifacio",
+   "rilevato_il": "2026-11-16T17:18:22Z"
+  },
+  {
+   "data": "2026-11-25",
+   "categoria": "penale",
+   "ufficio": "Giudice di pace di Potenza",
+   "magistrato": "Dott.ssa Brunetti",
+   "titolo": "UD. 25.11.26 DOTT.SSA Brunetti",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/UD.%2025.11.26%20DOTT.SSA%20Brunetti.pdf",
+   "dimensione": "51.12 KB",
+   "pagina": "/trattazione-udienze/giudice-di-pace/giudice-di-pace-di-potenza/sezione-penale/dottssa-brunetti",
+   "rilevato_il": "2026-11-16T17:18:22Z"
+  },
+  {
    "data": "2026-12-01",
    "categoria": "civile",
    "ufficio": "Corte d'Appello",
@@ -434,5 +478,5 @@
    "rilevato_il": "2026-11-12T09:28:28Z"
   }
  ],
- "aggiornato_il": "2026-11-16T00:18:24Z"
+ "aggiornato_il": "2026-11-16T17:18:22Z"
 }

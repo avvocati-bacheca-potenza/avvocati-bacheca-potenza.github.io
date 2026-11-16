@@ -1,7 +1,42 @@
 {
-  "dal": "2026-09-16",
+  "dal": "2026-09-17",
   "fonte": "https://www.ordineavvocatipotenza.it",
   "notizie": [
+    {
+      "link": "https://www.ordineavvocatipotenza.it/giustizia-riparativa-comune-matera",
+      "titolo": "GIUSTIZIA RIPARATIVA COMUNE MATERA",
+      "data": "2026-11-16",
+      "testo": null,
+      "allegati": [
+        {
+          "nome": "Copia 1) di 18.11.2026 MATERA.pdf",
+          "url": "https://www.ordineavvocatipotenza.it/sites/default/files/Copia%201%29%20di%2018.11.2026%20MATERA.pdf",
+          "dimensione": "3.06 MB"
+        }
+      ],
+      "rilevato_il": "2026-11-16T17:18:21Z",
+      "tipo": "generale"
+    },
+    {
+      "link": "https://www.ordineavvocatipotenza.it/astensione-dallattivita-giudiziaria",
+      "titolo": "ASTENSIONE DALL'ATTIVITA' GIUDIZIARIA",
+      "data": "2026-11-16",
+      "testo": null,
+      "allegati": [
+        {
+          "nome": "Astensione 23,24,25,26,27.11.2026..pdf",
+          "url": "https://www.ordineavvocatipotenza.it/sites/default/files/Astensione%2023%2C24%2C25%2C26%2C27.11.2026..pdf",
+          "dimensione": "365.25 KB"
+        },
+        {
+          "nome": "Delibera-053_2026-11-12_Astensione-23_27-11-2026.pdf",
+          "url": "https://www.ordineavvocatipotenza.it/sites/default/files/Delibera-053_2026-11-12_Astensione-23_27-11-2026.pdf",
+          "dimensione": "174.29 KB"
+        }
+      ],
+      "rilevato_il": "2026-11-16T17:18:21Z",
+      "tipo": "generale"
+    },
     {
       "link": "https://www.ordineavvocatipotenza.it/costituzione-elenchi-di-avvocati-cui-affidare-incarichi-di-sostituti-di-udienza-contenzioso",
       "titolo": "COSTITUZIONE ELENCHI DI AVVOCATI A CUI AFFIDARE INCARICHI DI SOSTITUTI DI UDIENZA CONTENZIOSO DIREZIONE REGIONALE BASILICATA INAIL",
