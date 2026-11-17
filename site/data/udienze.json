@@ -382,12 +382,45 @@
    "data": "2026-11-18",
    "categoria": "penale",
    "ufficio": "Tribunale",
+   "magistrato": "Dott. Cirillo",
+   "titolo": "DECRETO DR. CIRILLO 18.11.2026",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/DECRETO%20DR.%20CIRILLO%2018.11.2026.pdf",
+   "dimensione": "98.68 KB",
+   "pagina": "/trattazione-udienze/tribunale/sezione-penale/dott-cirillo",
+   "rilevato_il": "2026-11-17T18:25:56Z"
+  },
+  {
+   "data": "2026-11-18",
+   "categoria": "penale",
+   "ufficio": "Tribunale",
    "magistrato": "Dott.ssa Battista",
    "titolo": "DECRETO UDIENZA DEL 18.11.26 DR.SSA BATTISTA",
    "url": "https://www.ordineavvocatipotenza.it/sites/default/files/DECRETO%20UDIENZA%20DEL%2018.11.26%20DR.SSA%20BATTISTA.docx",
    "dimensione": "56.56 KB",
    "pagina": "/trattazione-udienze/tribunale/sezione-penale/dottssa-battista",
    "rilevato_il": "2026-11-16T17:18:22Z"
+  },
+  {
+   "data": "2026-11-18",
+   "categoria": "penale",
+   "ufficio": "Tribunale",
+   "magistrato": "Dott.ssa Mirone",
+   "titolo": "ORDINE DI TRATTAZIONE 18.11.2026 dott.ssa MIRONE",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/ORDINE%20DI%20TRATTAZIONE%2018.11.2026%20dott.ssa%20MIRONE.docx",
+   "dimensione": "32.95 KB",
+   "pagina": "/trattazione-udienze/tribunale/sezione-penale/dottssa-mirone",
+   "rilevato_il": "2026-11-17T18:25:56Z"
+  },
+  {
+   "data": "2026-11-18",
+   "categoria": "penale",
+   "ufficio": "Tribunale – GIP/GUP",
+   "magistrato": "Dott.ssa Iura",
+   "titolo": "STATINO 18.11.2026 DOTT.SSA IURA",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/STATINO%2018.11.2026%20DOTT.SSA%20IURA.pdf",
+   "dimensione": "168.18 KB",
+   "pagina": "/trattazione-udienze/tribunale/sezione-penale/ufficio-gip-gup/dottssa-iura",
+   "rilevato_il": "2026-11-17T18:25:56Z"
   },
   {
    "data": "2026-11-19",
@@ -399,6 +432,17 @@
    "dimensione": "236.34 KB",
    "pagina": "/trattazione-udienze/tribunale/sezione-penale/collegio-b",
    "rilevato_il": "2026-11-13T22:28:52Z"
+  },
+  {
+   "data": "2026-11-19",
+   "categoria": "penale",
+   "ufficio": "Tribunale – GIP/GUP",
+   "magistrato": "Dott. Setola",
+   "titolo": "Statino 19.11.2026 -DOTT. SETOLA",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/Statino%2019.11.2026%20-DOTT.%20SETOLA.pdf",
+   "dimensione": "153.43 KB",
+   "pagina": "/trattazione-udienze/tribunale/sezione-penale/ufficio-gip-gup/dott-setola",
+   "rilevato_il": "2026-11-17T18:25:56Z"
   },
   {
    "data": "2026-11-24",
@@ -478,5 +522,5 @@
    "rilevato_il": "2026-11-12T09:28:28Z"
   }
  ],
- "aggiornato_il": "2026-11-16T17:18:22Z"
+ "aggiornato_il": "2026-11-17T18:25:56Z"
 }
