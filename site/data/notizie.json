@@ -1,5 +1,5 @@
 {
-  "dal": "2026-09-17",
+  "dal": "2026-09-18",
   "fonte": "https://www.ordineavvocatipotenza.it",
   "notizie": [
     {
@@ -245,22 +245,6 @@
         }
       ],
       "rilevato_il": "2026-09-21T12:00:00Z",
-      "tipo": "generale"
-    },
-    {
-      "link": "https://www.ordineavvocatipotenza.it/diploma-universitario-di-alta-specializzazione-etica-e-intelligenza-artificiale",
-      "titolo": "DIPLOMA UNIVERSITARIO DI ALTA SPECIALIZZAZIONE IN ETICA E INTELLIGENZA ARTIFICIALE",
-      "data": "2026-09-17",
-      "testo": "class=\"field-items\">",
-      "allegati": [
-        {
-          "nome": "Diploma Universitario in Etica e Intelligenza Artificiale_Scuola Superiore dell'Avvocatura.pdf",
-          "url": "https://www.ordineavvocatipotenza.it/sites/default/files/Diploma%20Universitario%20in%20Etica%20e%20Intelligenza%20Artificiale_Scuola%20Superiore%20dell%27Avvocatura.pdf",
-          "dimensione": "1.37 MB"
-        }
-      ],
-      "rilevato_il": "2026-09-17T12:00:00Z",
-      "dettagli_letti": true,
       "tipo": "generale"
     }
   ]
