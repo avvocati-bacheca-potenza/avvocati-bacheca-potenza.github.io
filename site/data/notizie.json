@@ -1,7 +1,22 @@
 {
-  "dal": "2026-09-18",
+  "dal": "2026-09-20",
   "fonte": "https://www.ordineavvocatipotenza.it",
   "notizie": [
+    {
+      "link": "https://www.ordineavvocatipotenza.it/ministero-della-giustizia-sospensione-delle-attivita-del-presidio-di-prossimita-delludepe-presso-il",
+      "titolo": "MINISTERO DELLA GIUSTIZIA - SOSPENSIONE DELLE ATTIVITA' DEL PRESIDIO DI PROSSIMITA' DELL'UDEPE PRESSO IL TRIBUNALE DI POTENZA PER IL 19/11/2026",
+      "data": "2026-11-19",
+      "testo": null,
+      "allegati": [
+        {
+          "nome": "20261119082113799.pdf",
+          "url": "https://www.ordineavvocatipotenza.it/sites/default/files/20261119082113799.pdf",
+          "dimensione": "25.59 KB"
+        }
+      ],
+      "rilevato_il": "2026-11-19T23:09:28Z",
+      "tipo": "generale"
+    },
     {
       "link": "https://www.ordineavvocatipotenza.it/giustizia-riparativa-comune-matera",
       "titolo": "GIUSTIZIA RIPARATIVA COMUNE MATERA",

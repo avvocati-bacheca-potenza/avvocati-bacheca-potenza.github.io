@@ -436,6 +436,17 @@
   {
    "data": "2026-11-19",
    "categoria": "penale",
+   "ufficio": "Tribunale",
+   "magistrato": "Dott.ssa Caprio",
+   "titolo": "19.11.2026 dott.ssa Rosalia Caprio",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/19.11.2026%20dott.ssa%20Rosalia%20Caprio.docx",
+   "dimensione": "22.26 KB",
+   "pagina": "/trattazione-udienze/tribunale/sezione-penale/dottssa-caprio",
+   "rilevato_il": "2026-11-19T23:09:29Z"
+  },
+  {
+   "data": "2026-11-19",
+   "categoria": "penale",
    "ufficio": "Tribunale – GIP/GUP",
    "magistrato": "Dott. Setola",
    "titolo": "Statino 19.11.2026 -DOTT. SETOLA",
@@ -443,6 +454,17 @@
    "dimensione": "153.43 KB",
    "pagina": "/trattazione-udienze/tribunale/sezione-penale/ufficio-gip-gup/dott-setola",
    "rilevato_il": "2026-11-17T18:25:56Z"
+  },
+  {
+   "data": "2026-11-23",
+   "categoria": "penale",
+   "ufficio": "Tribunale",
+   "magistrato": "Collegio A",
+   "titolo": "Collegio A - Ordine di chiamata - Udienza del 23.11.2026",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/Collegio%20A%20-%20Ordine%20di%20chiamata%20-%20Udienza%20del%2023.11.2026.pdf",
+   "dimensione": "174.79 KB",
+   "pagina": "/trattazione-udienze/tribunale/sezione-penale/collegio",
+   "rilevato_il": "2026-11-19T23:09:29Z"
   },
   {
    "data": "2026-11-24",
@@ -478,6 +500,17 @@
    "rilevato_il": "2026-11-16T17:18:22Z"
   },
   {
+   "data": "2026-11-24",
+   "categoria": "penale",
+   "ufficio": "Tribunale",
+   "magistrato": "Dott.ssa Bonamico",
+   "titolo": "DECRETO DR.SSA BONAMICO 24.11.2026",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/DECRETO%20DR.SSA%20BONAMICO%2024.11.2026.pdf",
+   "dimensione": "68.32 KB",
+   "pagina": "/trattazione-udienze/tribunale/sezione-penale/dottssa-bonamico",
+   "rilevato_il": "2026-11-19T23:09:29Z"
+  },
+  {
    "data": "2026-11-25",
    "categoria": "penale",
    "ufficio": "Giudice di pace di Potenza",
@@ -487,6 +520,39 @@
    "dimensione": "51.12 KB",
    "pagina": "/trattazione-udienze/giudice-di-pace/giudice-di-pace-di-potenza/sezione-penale/dottssa-brunetti",
    "rilevato_il": "2026-11-16T17:18:22Z"
+  },
+  {
+   "data": "2026-11-25",
+   "categoria": "penale",
+   "ufficio": "Tribunale",
+   "magistrato": "Collegio A",
+   "titolo": "Collegio A - Ordine di chiamata - Udienza del 25.11.2026",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/Collegio%20A%20-%20Ordine%20di%20chiamata%20-%20Udienza%20del%2025.11.2026.pdf",
+   "dimensione": "176.77 KB",
+   "pagina": "/trattazione-udienze/tribunale/sezione-penale/collegio",
+   "rilevato_il": "2026-11-19T23:09:29Z"
+  },
+  {
+   "data": "2026-11-25",
+   "categoria": "penale",
+   "ufficio": "Tribunale",
+   "magistrato": "Dott.ssa Battista",
+   "titolo": "DECRETO UDIENZA 25.11.26 DR.SSA BATTISTA",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/DECRETO%20UDIENZA%2025.11.26%20DR.SSA%20BATTISTA.pdf",
+   "dimensione": "180.79 KB",
+   "pagina": "/trattazione-udienze/tribunale/sezione-penale/dottssa-battista",
+   "rilevato_il": "2026-11-19T23:09:29Z"
+  },
+  {
+   "data": "2026-11-26",
+   "categoria": "penale",
+   "ufficio": "Tribunale",
+   "magistrato": "Collegio B",
+   "titolo": "COLLEGIO B - ORDINE DI CHIAMATA - UDIENZA 26.11.2026",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/COLLEGIO%20B%20-%20ORDINE%20DI%20CHIAMATA%20-%20UDIENZA%2026.11.2026.pdf",
+   "dimensione": "527.69 KB",
+   "pagina": "/trattazione-udienze/tribunale/sezione-penale/collegio-b",
+   "rilevato_il": "2026-11-19T23:09:29Z"
   },
   {
    "data": "2026-12-01",
@@ -514,6 +580,17 @@
    "data": "2026-12-15",
    "categoria": "civile",
    "ufficio": "Corte d'Appello",
+   "magistrato": "Collegio Primo (Coll. A)",
+   "titolo": "DECRETO 15.12.26 coll. A",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/DECRETO%2015.12.26%20coll.%20A.pdf",
+   "dimensione": "700.68 KB",
+   "pagina": "/trattazione-udienze/corte-dappello/sezione-civile/collegio-primo-coll",
+   "rilevato_il": "2026-11-19T23:09:29Z"
+  },
+  {
+   "data": "2026-12-15",
+   "categoria": "civile",
+   "ufficio": "Corte d'Appello",
    "magistrato": "Secondo Collegio (Coll. B)",
    "titolo": "DECRETO 15-12-2026 COLL. B",
    "url": "https://www.ordineavvocatipotenza.it/sites/default/files/DECRETO%2015-12-2026%20COLL.%20B.pdf",
@@ -522,5 +599,5 @@
    "rilevato_il": "2026-11-12T09:28:28Z"
   }
  ],
- "aggiornato_il": "2026-11-17T18:25:56Z"
+ "aggiornato_il": "2026-11-19T23:09:29Z"
 }
