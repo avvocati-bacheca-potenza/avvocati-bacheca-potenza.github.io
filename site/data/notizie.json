@@ -1,5 +1,5 @@
 {
-  "dal": "2026-09-20",
+  "dal": "2026-09-22",
   "fonte": "https://www.ordineavvocatipotenza.it",
   "notizie": [
     {
@@ -245,21 +245,6 @@
         }
       ],
       "rilevato_il": "2026-09-22T12:00:00Z",
-      "tipo": "generale"
-    },
-    {
-      "link": "https://www.ordineavvocatipotenza.it/attivita-del-consiglio/riunione-del-consiglio-dellordine-del-10-settembre-2026",
-      "titolo": "Riunione del Consiglio dell'Ordine del 10 settembre 2026",
-      "data": "2026-09-21",
-      "testo": "Data: 21/09/2026 Allegati: verbale 10.09.2026 omissato.pdf",
-      "allegati": [
-        {
-          "nome": "verbale 10.09.2026 omissato.pdf",
-          "url": "https://www.ordineavvocatipotenza.it/sites/default/files/verbale%2010.09.2026%20omissato.pdf",
-          "dimensione": ""
-        }
-      ],
-      "rilevato_il": "2026-09-21T12:00:00Z",
       "tipo": "generale"
     }
   ]
