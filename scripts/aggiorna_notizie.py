@@ -86,8 +86,12 @@ def dettagli_notizia(link):
     return (testo(senza_tabelle)[:600] or None), allegati
 
 
+# «Sostituti di udienza» (elenchi di avvocati incaricati da enti) non sono comunicazioni sulle udienze.
+NON_UDIENZE = re.compile(r"sostitut\w*\s+d[ie]\s+udienz\w*", re.I)
+
+
 def tipo_notizia(titolo):
-    return "udienze" if UDIENZE.search(titolo) else "generale"
+    return "udienze" if UDIENZE.search(NON_UDIENZE.sub("", titolo)) else "generale"
 
 
 def con_tentativi(fn, nome, tentativi=3):
@@ -108,6 +112,7 @@ def main():
     oggi = datetime.date.today()
     dal = (oggi - datetime.timedelta(days=GIORNI_FINESTRA)).isoformat()
     conserva = (oggi - datetime.timedelta(days=GIORNI_CONSERVA)).isoformat()
+    originale = json.loads(json.dumps(stato["notizie"]))  # copia per capire se qualcosa è cambiato
     salvate = {n["link"]: n for n in stato["notizie"] if n["data"] >= conserva}
 
     dalla_bacheca = con_tentativi(da_bacheca, "bacheca")
@@ -146,8 +151,11 @@ def main():
                 corrente["dettagli_letti"] = True
         corrente["tipo"] = tipo_notizia(corrente["titolo"])
 
+    for n in salvate.values():  # la classificazione vale anche per le notizie non più nelle ultime lette
+        n["tipo"] = tipo_notizia(n["titolo"])
+
     elenco = sorted(salvate.values(), key=lambda n: (n["data"], n["rilevato_il"]), reverse=True)
-    modificato = elenco != stato["notizie"]
+    modificato = elenco != originale
     if modificato:
         nuovo = dict(stato, dal=dal, notizie=elenco)
         with open(FILE, "w", encoding="utf-8") as f:

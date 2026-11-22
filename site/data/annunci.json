@@ -9,6 +9,38 @@
   ],
   "annunci": [
     {
+      "id": 10,
+      "titolo": "Percorso di formazione e sensibilizzazione — cinque incontri a Palazzo della Cultura",
+      "testo": "Palazzo della Cultura, Potenza. Incontri dalle 16:30 alle 19:00:\n• giovedì 26 novembre: «Violenza: pietra e fionda»\n• martedì 1 dicembre: «L'ombra dell'eredità: genesi, ripetizione e snodi clinico-istituzionali della violenza di genere e sui minori»\n• mercoledì 9 dicembre: «Codice Rosso e Raccomandazione U.E. 1238/2024»\n• martedì 15 dicembre: «I servizi attivi nella città di Potenza» e «Servizi e politiche sulla violenza di genere e/o sui minori»\n\nEvento accreditato dal CROAS Basilicata (Ordine degli assistenti sociali) con 10 crediti, di cui 2 deontologici; è obbligatorio partecipare ad almeno l'80% delle ore complessive. Per registrarsi inviare una e-mail a info@ethoscooperativa.com.",
+      "categoria": "Formazione",
+      "autore": "Ethos Società Cooperativa Sociale",
+      "link": null,
+      "immagine": "img/percorso-formazione-sensibilizzazione-2026-11-26.jpg",
+      "immagine_alt": "Locandina del percorso di formazione e sensibilizzazione di Ethos a Palazzo della Cultura, dal 20 novembre al 15 dicembre 2026",
+      "date_evento": [
+        "2026-11-26",
+        "2026-12-01",
+        "2026-12-09",
+        "2026-12-15"
+      ],
+      "in_evidenza": true,
+      "pubblicato_il": "2026-11-22",
+      "scade_il": "2026-12-15"
+    },
+    {
+      "id": 9,
+      "titolo": "Il ragionevole dubbio e la giustizia mediatica",
+      "testo": "Sabato 28 novembre 2026, ore 9:30 – 12:30\nPalazzo della Cultura, Via Cesare Battisti 22, Potenza\n\nNell'occasione sarà conferito il riconoscimento in memoria dell'Avv. Giuseppe D'Addario.\n\nIscrizione mediante il sistema Riconosco. L'evento è accreditato ai fini della formazione professionale continua con il riconoscimento di n. 3 crediti in materia obbligatoria.",
+      "categoria": "Formazione",
+      "autore": null,
+      "link": null,
+      "immagine": "img/ragionevole-dubbio-giustizia-mediatica-2026-11-28.jpg",
+      "immagine_alt": "Locandina dell'incontro «Il ragionevole dubbio e la giustizia mediatica» del 28 novembre 2026 a Potenza",
+      "in_evidenza": true,
+      "pubblicato_il": "2026-11-22",
+      "scade_il": "2026-11-28"
+    },
+    {
       "id": 7,
       "titolo": "Il coraggio della scelta — Storie di donne in lotta per la libertà",
       "testo": "Sabato 14 novembre 2026, ore 10:00\nPalazzo di Giustizia di Potenza, Aula Grippo\n\nIncontro con la scrittrice Yassmin Pucci, autrice di «Non chiamatemi principessa» (Le Lettere).\n\nIscrizione mediante il sistema Riconosco. L'evento è accreditato ai fini della formazione professionale continua con il riconoscimento di n. 3 crediti in materia obbligatoria.",

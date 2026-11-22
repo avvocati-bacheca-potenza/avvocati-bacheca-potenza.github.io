@@ -229,7 +229,7 @@ def main():
         return
     elenco = sorted(raccolti.values(), key=lambda d: (d["data"], d["categoria"], d["ufficio"], d["magistrato"], d["titolo"]))
     nuovo = {"da": da.isoformat(), "pagine_lette": pagine_ok, "pagine_totali": len(percorsi),
-             "fonte": SITO + "/trattazione-udienze", "udienze": elenco}
+             "fonte": SITO + "/provvedimenti-di-rinvio-delle-udienze", "udienze": elenco}
     vecchio_cmp = {k: v for k, v in precedente.items() if k != "aggiornato_il"}
     modificato = nuovo != vecchio_cmp
     if modificato:

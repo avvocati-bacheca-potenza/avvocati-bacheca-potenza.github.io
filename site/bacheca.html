@@ -184,8 +184,10 @@ async function carica() {
   // Ordine: prima gli eventi (annunci con una data), dal più vicino al più lontano; poi gli annunci in evidenza
   // senza data; poi il resto (notizie dell'Ordine comprese) dal più recente.
   const gruppo = v => v.fonte === "locale" && v.scade_il ? 0 : v.in_evidenza ? 1 : 2;
+  // Per un evento in più date conta la prossima data ancora da svolgere (campo date_evento), altrimenti la scadenza.
+  const prossima = v => (v.date_evento || []).find(d => d >= g) || v.scade_il;
   voci = [...locali, ...ordine].sort((x, y) => gruppo(x) - gruppo(y) ||
-    (gruppo(x) === 0 ? x.scade_il.localeCompare(y.scade_il) : y.data.localeCompare(x.data)));
+    (gruppo(x) === 0 ? prossima(x).localeCompare(prossima(y)) : y.data.localeCompare(x.data)));
   // La sezione «Varie» resta sempre visibile, anche quando non ha annunci; le altre compaiono solo se ne hanno.
   const usate = new Set([...locali.map(x => x.categoria), "Varie"]);
   document.querySelectorAll(".chip[data-cat]").forEach(c => c.remove());
