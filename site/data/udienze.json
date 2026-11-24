@@ -401,6 +401,28 @@
    "rilevato_il": "2026-11-09T14:14:45Z"
   },
   {
+   "data": "2026-12-01",
+   "categoria": "penale",
+   "ufficio": "Giudice di pace di Potenza",
+   "magistrato": "Dott.ssa Potenza",
+   "titolo": "ud. 01.12.26 dott.ssa Potenza",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/ud.%2001.12.26%20dott.ssa%20Potenza.pdf",
+   "dimensione": "84.02 KB",
+   "pagina": "/trattazione-udienze/giudice-di-pace/giudice-di-pace-di-potenza/sezione-penale/dottssa-potenza",
+   "rilevato_il": "2026-11-24T15:08:09Z"
+  },
+  {
+   "data": "2026-12-02",
+   "categoria": "penale",
+   "ufficio": "Tribunale",
+   "magistrato": "Dott. Cirillo",
+   "titolo": "decreto udienza 02.12.2026 dott. Cirillo",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/decreto%20udienza%2002.12.2026%20dott.%20Cirillo.pdf",
+   "dimensione": "148.15 KB",
+   "pagina": "/trattazione-udienze/tribunale/sezione-penale/dott-cirillo",
+   "rilevato_il": "2026-11-24T15:08:09Z"
+  },
+  {
    "data": "2026-12-15",
    "categoria": "civile",
    "ufficio": "Corte d'Appello",
@@ -423,5 +445,5 @@
    "rilevato_il": "2026-11-12T09:28:28Z"
   }
  ],
- "aggiornato_il": "2026-11-23T06:03:27Z"
+ "aggiornato_il": "2026-11-24T15:08:09Z"
 }
