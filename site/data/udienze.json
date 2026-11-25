@@ -412,6 +412,17 @@
    "rilevato_il": "2026-11-24T15:08:09Z"
   },
   {
+   "data": "2026-12-01",
+   "categoria": "penale",
+   "ufficio": "Giudice di pace di Potenza",
+   "magistrato": "Dott.ssa Rossi",
+   "titolo": "ud. 01.12.26 dott.ssa Rossi",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/ud.%2001.12.26%20dott.ssa%20Rossi.pdf",
+   "dimensione": "64.74 KB",
+   "pagina": "/trattazione-udienze/giudice-di-pace/giudice-di-pace-di-potenza/sezione-penale/dottssa-rossi",
+   "rilevato_il": "2026-11-25T00:00:04Z"
+  },
+  {
    "data": "2026-12-02",
    "categoria": "penale",
    "ufficio": "Tribunale",
@@ -445,5 +456,5 @@
    "rilevato_il": "2026-11-12T09:28:28Z"
   }
  ],
- "aggiornato_il": "2026-11-24T15:08:09Z"
+ "aggiornato_il": "2026-11-25T00:00:04Z"
 }
