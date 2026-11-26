@@ -379,6 +379,17 @@
    "rilevato_il": "2026-11-20T13:26:25Z"
   },
   {
+   "data": "2026-11-30",
+   "categoria": "penale",
+   "ufficio": "Tribunale",
+   "magistrato": "Collegio A",
+   "titolo": "Collegio A - Ordine di chiamata - Udienza del 30.11.2026_",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/Collegio%20A%20-%20Ordine%20di%20chiamata%20-%20Udienza%20del%2030.11.2026_.pdf",
+   "dimensione": "166.67 KB",
+   "pagina": "/trattazione-udienze/tribunale/sezione-penale/collegio",
+   "rilevato_il": "2026-11-26T11:19:01Z"
+  },
+  {
    "data": "2026-12-01",
    "categoria": "civile",
    "ufficio": "Corte d'Appello",
@@ -423,6 +434,39 @@
    "rilevato_il": "2026-11-25T00:00:04Z"
   },
   {
+   "data": "2026-12-01",
+   "categoria": "penale",
+   "ufficio": "Giudice di pace di Viggiano",
+   "magistrato": "",
+   "titolo": "ordine_di_trattazione_dei_procedimenti_penali_all'udienza_penale_del_01-12-2026 gdp Viggiano",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/ordine_di_trattazione_dei_procedimenti_penali_all%27udienza_penale_del_01-12-2026%20gdp%20Viggiano.pdf",
+   "dimensione": "314.86 KB",
+   "pagina": "/trattazione-udienze/giudice-di-pace/giudice-di-pace-di-viggiano",
+   "rilevato_il": "2026-11-26T11:19:01Z"
+  },
+  {
+   "data": "2026-12-01",
+   "categoria": "penale",
+   "ufficio": "Tribunale",
+   "magistrato": "Dott.ssa Bonamico",
+   "titolo": "DECRETO DR. BONAMICO 1.12.2026",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/DECRETO%20DR.%20BONAMICO%201.12.2026.pdf",
+   "dimensione": "98.99 KB",
+   "pagina": "/trattazione-udienze/tribunale/sezione-penale/dottssa-bonamico",
+   "rilevato_il": "2026-11-26T11:19:01Z"
+  },
+  {
+   "data": "2026-12-02",
+   "categoria": "penale",
+   "ufficio": "Tribunale",
+   "magistrato": "Collegio A",
+   "titolo": "Collegio A - Ordine di chiamata - Udienza del 2.12.2026",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/Collegio%20A%20-%20Ordine%20di%20chiamata%20-%20Udienza%20del%202.12.2026.pdf",
+   "dimensione": "164.57 KB",
+   "pagina": "/trattazione-udienze/tribunale/sezione-penale/collegio",
+   "rilevato_il": "2026-11-26T11:19:01Z"
+  },
+  {
    "data": "2026-12-02",
    "categoria": "penale",
    "ufficio": "Tribunale",
@@ -432,6 +476,17 @@
    "dimensione": "148.15 KB",
    "pagina": "/trattazione-udienze/tribunale/sezione-penale/dott-cirillo",
    "rilevato_il": "2026-11-24T15:08:09Z"
+  },
+  {
+   "data": "2026-12-02",
+   "categoria": "penale",
+   "ufficio": "Tribunale",
+   "magistrato": "Dott.ssa Mirone",
+   "titolo": "ORDINE DI TRATTAZIONE 2.12.2026 dott.ssa Mirone",
+   "url": "https://www.ordineavvocatipotenza.it/sites/default/files/ORDINE%20DI%20TRATTAZIONE%202.12.2026%20dott.ssa%20Mirone.docx",
+   "dimensione": "33.17 KB",
+   "pagina": "/trattazione-udienze/tribunale/sezione-penale/dottssa-mirone",
+   "rilevato_il": "2026-11-26T11:19:01Z"
   },
   {
    "data": "2026-12-15",
@@ -456,5 +511,5 @@
    "rilevato_il": "2026-11-12T09:28:28Z"
   }
  ],
- "aggiornato_il": "2026-11-25T00:00:04Z"
+ "aggiornato_il": "2026-11-26T11:19:01Z"
 }
